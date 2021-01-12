@@ -2,7 +2,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
 }
 
-group 'fr.goodfood'
+group 'goodfood'
 version '0.1.0'
 
 repositories {
@@ -13,4 +13,14 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     implementation "io.javalin:javalin:3.12.0"
     implementation "org.slf4j:slf4j-simple:1.7.30"
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'fr.goodfood.ServerKt'
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }

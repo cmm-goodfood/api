@@ -3,7 +3,6 @@ package fr.goodfood
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder
 import io.javalin.core.security.SecurityUtil.roles
-import io.javalin.http.Context
 
 fun main() {
     val server = Javalin.create {
