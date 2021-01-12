@@ -15,5 +15,5 @@ fun main() {
         ApiBuilder.get("/secured", { it.result("Hello") }, roles(Role.USER))
     }
 
-    server.start(7000)
+    server.start(80)
 }
