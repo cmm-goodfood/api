@@ -16,6 +16,8 @@ dependencies {
 }
 
 jar {
+    archiveName = "${jar.baseName}.${jar.extension}"
+
     manifest {
         attributes 'Main-Class': 'fr.goodfood.ServerKt'
     }
