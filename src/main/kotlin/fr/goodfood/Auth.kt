@@ -1,20 +1,50 @@
 package fr.goodfood
 
-import io.javalin.core.security.Role as JavalinRole
+import com.auth0.jwt.JWT
+import com.auth0.jwt.JWTCreator
+import com.auth0.jwt.JWTVerifier
+import com.auth0.jwt.algorithms.Algorithm
+import fr.goodfood.entities.User
+import io.javalin.Javalin
 import io.javalin.http.Context
 import io.javalin.http.Handler
+import javalinjwt.JWTGenerator
+import javalinjwt.JWTProvider
+import javalinjwt.JavalinJWT
+import javalinjwt.examples.JWTResponse
 
 object Auth {
 
-    private fun extractRole(ctx: Context): Role {
-        return Role.ANONYMOUS
+    data class GenerateToken(val email: String, val password: String);
+
+    fun setup(app: Javalin): Handler {
+        val algorithm = Algorithm.HMAC256("verysecretrecstsfdeuzfzoeifjzeoih")
+
+        val generator = JWTGenerator<User> { user, alg ->
+            val token: JWTCreator.Builder = JWT.create()
+                .withClaim("email", user.email)
+                .withClaim("role", user.role.name)
+            token.sign(alg)
+        }
+
+        val verifier: JWTVerifier = JWT.require(algorithm).build()
+
+        val provider = JWTProvider(algorithm, generator, verifier)
+        val decodeHandler: Handler = JavalinJWT.createHeaderDecodeHandler(provider)
+
+        app.before(decodeHandler);
+
+        return Handler { context: Context ->
+            val data = context.body<GenerateToken>()
+
+            val user = User(
+                email = data.email,
+                password = data.password,
+                role = Role.USER
+            )
+
+            context.json(JWTResponse(provider.generateToken(user)))
+        };
     }
 
-    fun accessManager(handler: Handler, ctx: Context, roles: Set<JavalinRole>) {
-        if (roles.isEmpty() || roles.contains(extractRole(ctx))) {
-            handler.handle(ctx)
-        } else {
-            ctx.status(401).result("Unauthorized")
-        }
-    }
 }
