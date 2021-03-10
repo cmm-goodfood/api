@@ -23,7 +23,7 @@ object Auth {
         val generator = JWTGenerator<User> { user, alg ->
             val token: JWTCreator.Builder = JWT.create()
                 .withClaim("email", user.email)
-                .withClaim("role", user.role.name)
+                .withClaim("role", user.role?.name)
             token.sign(alg)
         }
 

@@ -3,14 +3,20 @@ package fr.goodfood.entities
 import fr.goodfood.Role
 
 data class User(
-    val role: Role,
-    val email: String,
-    val password: String? = null,
-    val firstname: String? = null,
-    val lastname: String? = null,
-    val address: Address? = null
+    var id: Int = 0,
+    var role: Role? = null,
+    var email: String,
+    var password: String? = null,
+    var firstname: String? = null,
+    var lastname: String? = null,
+    var address: Address? = null
 )
 
 data class Address(
-    val street: String
+    val id: Int = 0,
+    val number: String,
+    val street: String,
+    val addition: String? = null,
+    val city: String,
+    val postcode: String
 )

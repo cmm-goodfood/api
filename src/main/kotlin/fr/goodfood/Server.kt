@@ -29,7 +29,9 @@ fun main() {
             get("/users", UserController::list, roles(Role.USER))
             get("/user/:id", UserController::find, roles(Role.USER))
             get("/user", UserController::findByEmail, roles(Role.USER))
-            post("/user", UserController::create, roles(Role.USER))
+            post("/users", UserController::create, roles(Role.USER))
+            patch("/user/:id", UserController::edit, roles(Role.USER))
+            delete("/user/:id", UserController::delete, roles(Role.USER))
         }
     }
     //val jwt = JavalinJWT.getDecodedFromContext(ctx)
