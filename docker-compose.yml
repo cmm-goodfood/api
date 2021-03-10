@@ -1,0 +1,37 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: goodfood_postgres
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
+      PGDATA: /data/postgres
+    volumes:
+      - ./res/good-food.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    ports:
+      - "8082:5432"
+    networks:
+      - goodfood_network
+    restart: unless-stopped
+  
+  pgadmin:
+    container_name: goodfood_pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin4@pgadmin.org
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "8081:80"
+    networks:
+      - goodfood_network
+    restart: unless-stopped
+
+networks:
+  goodfood_network:
+    driver: bridge
+
+volumes:
+    postgres:
+    pgadmin:
