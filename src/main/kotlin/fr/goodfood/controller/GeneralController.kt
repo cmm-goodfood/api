@@ -1,7 +1,11 @@
 package fr.goodfood.controller
 
+import fr.goodfood.entities.User
 import io.javalin.http.Context
+import org.simplejavamail.email.EmailBuilder
+import org.simplejavamail.mailer.MailerBuilder
 import java.io.InputStream
+
 
 object GeneralController {
 
@@ -23,21 +27,41 @@ object GeneralController {
     data class Email(val email: String);
 
     fun resetRequest(ctx: Context) {
-        val email = ctx.body<Email>();
+        val data = ctx.body<Email>();
 
-        //TODO: generate token and send password reset email
+        val email = EmailBuilder.startingBlank()
+            .from("goodfood", "goodfood@goodfood.com")
+            .to(data.email, data.email)
+            .withSubject("Mail")
+            .withHTMLText("<p>Mail</p>")
+            .buildEmail()
 
-        ctx.result(InputStream.nullInputStream())
+        val mailer = MailerBuilder
+            .withSMTPServer("smtp.mailtrap.io", 587, "e10154a96602b7", "a44207f04588d1")
+            .buildMailer();
+
+        mailer.sendMail(email);
+
+        ctx.result(String())
     }
 
-    data class ResetPassword(val token: String, val email: String, val password: String);
+    data class ResetPassword(val token: String, val id: Int, val password: String)
 
     fun resetPassword(ctx: Context) {
         val data = ctx.body<ResetPassword>()
 
-        //TODO: change user password and send email
+        val existing = UserController.mock.find {
+            it.id == data.id
+        }
 
-        ctx.result(InputStream.nullInputStream())
+        if(existing == null) {
+            ctx.status(404)
+            return
+        }
+
+        existing.password = data.password
+
+        ctx.result(String())
     }
 
     data class Revoke(val token: String)
@@ -47,7 +71,7 @@ object GeneralController {
 
         //TODO: revoke token
 
-        ctx.result(InputStream.nullInputStream())
+        ctx.result(String())
     }
 
 }
