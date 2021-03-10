@@ -13,7 +13,7 @@ import java.util.*
 object UserController {
 
     private var id = 5
-    private val mock = arrayListOf(
+    val mock = arrayListOf(
         User(id = 1, email = "clement.curiel@viacesi.fr", firstname = "Clément", lastname = "CURIEL", role = Role.RESTAURANT),
         User(id = 2, email = "matteo.hevin@viacesi.fr", firstname = "Matteo", lastname = "HEVIN", role = Role.DELIVERY),
         User(id = 3, email = "pierre.pegeon@viacesi.fr", firstname = "Pierre", lastname = "PEGEON", role = Role.MODERATOR),
