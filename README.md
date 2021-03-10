@@ -20,3 +20,25 @@ And set up connection with these logins (from docker-compose file) :
 > container_name: goodfood_postgres \
 > POSTGRES_USER: user \
 > POSTGRES_PASSWORD: user
+
+A common sql request could be :
+
+```sql
+
+SELECT
+    commande.*,
+    type.nom as "Type"
+FROM T_COMMANDE commande
+INNER JOIN T_ETAT_COMMANDE etat
+    ON commande.idEtat = etat.id
+INNER JOIN T_TYPE_COMMANDE type
+    ON commande.idType = type.id
+INNER JOIN T_RESTAURANT restaurant
+    ON commande.idRestaurant = restaurant.id
+WHERE
+1 = 1
+AND restaurant.id = 1
+AND etat.nom = 'PREPARING'
+ORDER BY dateCreation desc
+
+```

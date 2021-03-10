@@ -1,0 +1,1001 @@
+id,numero,voie,complement,ville,code_postal
+1,1,Sunfield,Avenue,Lipnica Wielka,34-483
+2,94,Lien,Alley,Nezvěstice,332 04
+3,216,Oak,Crossing,Koímisi,75000
+4,5579,Gale,Terrace,Issoudun,36104 CEDEX
+5,23667,Forest,Hill,Rimus,2519
+6,290,Tomscot,Avenue,Areni,75000
+7,341,Bunting,Drive,Serang,75000
+8,41355,Kensington,Pass,Metsemotlhaba,75000
+9,9745,Pierstorff,Trail,Banjar Danginsema,75000
+10,0,Redwing,Terrace,Tanarara,75000
+11,2743,Nancy,Court,Höganäs,263 36
+12,97,Columbus,Street,Ramat HaSharon,75000
+13,5628,Gulseth,Road,Sinamaica,75000
+14,34029,Springs,Terrace,Higashine,999-3776
+15,5877,Gateway,Park,Jawand,75000
+16,422,Jenna,Point,Olszanica,38-722
+17,9,Vera,Drive,Hoeyang,75000
+18,27,Esker,Lane,Trakai,21001
+19,42717,Blaine,Alley,Obala,75000
+20,7780,East,Park,Mino,709-4306
+21,1,Rowland,Trail,Suban,75000
+22,99,Derek,Alley,Liangjing,75000
+23,3826,Goodland,Drive,Burao,75000
+24,5,American,Way,Xiaping,75000
+25,1007,Summit,Place,Kuasha,75000
+26,94,Roxbury,Lane,Nongoma,3950
+27,1592,Farragut,Center,Munkfors,684 91
+28,097,Oakridge,Hill,Eastern Suburbs Mc,1391
+29,9,Shelley,Place,Valinhos,13270-000
+30,86,Reinke,Street,Tanxi,75000
+31,504,Colorado,Junction,Banjarsari,75000
+32,1092,Holy Cross,Court,Chipata,75000
+33,0948,Elgar,Pass,Uryupinsk,403140
+34,66,Brentwood,Terrace,Bukal,8420
+35,3,Delaware,Point,Voi,75000
+36,0,Sloan,Drive,Krasica,52460
+37,435,Westerfield,Road,Ćićevac,75000
+38,60,Gerald,Plaza,Selnica,49246
+39,510,Butterfield,Alley,Fare,75000
+40,5,Charing Cross,Plaza,Qiling,75000
+41,376,Marcy,Trail,San Benito Abad,703018
+42,80,Eagle Crest,Plaza,Kupu,75000
+43,636,Boyd,Terrace,Bordeaux,33036 CEDEX
+44,8,Northview,Hill,Kangar,01630
+45,63,Dottie,Road,Yongqin,75000
+46,61,Burrows,Parkway,Tosno,187003
+47,4,Onsgard,Court,Vidual,3220-350
+48,864,Fulton,Center,Longxi,75000
+49,50,4th,Court,Nalsian Norte,2424
+50,146,Northland,Terrace,Zhoukou,75000
+51,9762,Weeping Birch,Junction,Sikka,75000
+52,31659,Evergreen,Parkway,Sa Bot,15240
+53,59866,Sage,Terrace,Karlovy Vary,360 01
+54,2068,Kenwood,Place,Kabala,75000
+55,73982,Mccormick,Street,Clisson,44194 CEDEX
+56,308,Montana,Hill,Chengbei,75000
+57,1826,Dorton,Drive,Dongshan,75000
+58,06988,Thackeray,Park,Nong Hin,10250
+59,64,Moland,Street,Segbwema,75000
+60,39,Meadow Ridge,Park,Niort,79072 CEDEX 9
+61,35,Hovde,Street,Krajan Bejagung,75000
+62,57,Sutherland,Place,Pigcawayan,9412
+63,56,Saint Paul,Point,Kotakan Selatan,75000
+64,010,Saint Paul,Center,Qingxi,75000
+65,409,South,Junction,Austin,78726
+66,742,Badeau,Point,Isla Pucú,75000
+67,04604,Clove,Court,Gjirokastër,75000
+68,4155,Fairfield,Road,Qiucun,75000
+69,26,Kropf,Plaza,New York City,10175
+70,60,Express,Street,Kyzyldzhar,75000
+71,4,Main,Park,Las Vegas,89160
+72,1307,Forster,Parkway,Xiangride,75000
+73,50,Graceland,Alley,Gongming,75000
+74,43902,Pond,Way,Sukhothai,75120
+75,6,Mallory,Trail,Az Zāhir,75000
+76,88,Sullivan,Terrace,Gayle,75000
+77,9135,Elka,Crossing,Jetak,75000
+78,4191,Huxley,Terrace,Luchingu,75000
+79,9,Homewood,Circle,Candelaria,111711
+80,79251,Clarendon,Lane,Loandjili,75000
+81,88,Rutledge,Junction,Lyubinskiy,646160
+82,69271,Everett,Place,Shuimen,75000
+83,6810,Bowman,Alley,Dallas,75265
+84,261,Homewood,Park,Gojō,648-0002
+85,080,Sunnyside,Hill,Komsomol’skiy,75000
+86,3524,Mayer,Center,Chuanbu,75000
+87,6072,Sage,Court,Shuiyin,75000
+88,5464,Warner,Street,Tours,37016 CEDEX 1
+89,89701,Maywood,Drive,Allentown,18105
+90,98,Warrior,Crossing,Akhtarīn,75000
+91,96995,Pleasure,Alley,Selaphum,33150
+92,52,Calypso,Alley,Kebonagung,75000
+93,757,Mariners Cove,Lane,Umeå,904 35
+94,1038,Corben,Avenue,Tsiombe,75000
+95,42976,Golf View,Court,Bjuv,267 35
+96,6,Loeprich,Road,Moscow,901993
+97,91386,Heffernan,Place,Ndofane,75000
+98,135,Maple Wood,Drive,Toul,54204 CEDEX
+99,5,Grim,Road,Jakubowice Murowane,21-003
+100,7,Pennsylvania,Hill,Banjar Lalangpasek,75000
+101,478,Graedel,Way,Rîşcani,MD-5635
+102,385,Nova,Trail,Borbon,6008
+103,20107,Carberry,Junction,Gabasumdo,75000
+104,9,Pearson,Center,Perstorp,284 92
+105,368,Marquette,Circle,Phatthalung,73130
+106,7,Vidon,Court,Aba,75000
+107,53,Melrose,Street,Meiktila,75000
+108,17,Northfield,Trail,San Jose,8427
+109,66,Loomis,Street,Gaspra,75000
+110,984,Manitowish,Hill,La Laja,75000
+111,52480,Kensington,Hill,Carcassonne,11878 CEDEX 9
+112,47,Jenifer,Terrace,Węgrzce Wielkie,32-002
+113,14673,Pierstorff,Point,Hagonoy,8006
+114,34918,John Wall,Circle,Dragash,75000
+115,9,Mccormick,Street,Bebedouro,14700-000
+116,77202,Granby,Lane,Batgrām,21041
+117,6,Morningstar,Circle,Kalidawir,75000
+118,3773,Amoth,Hill,Betim,32500-000
+119,31079,Oneill,Drive,Victoriaville,G6T
+120,37,Knutson,Plaza,Lendangara Satu,75000
+121,8120,Lunder,Point,Kansas City,66160
+122,3,Southridge,Street,Kiarajangkung,75000
+123,14,Barby,Road,Nantes,44265 CEDEX 2
+124,7634,Wayridge,Circle,Balun,75000
+125,6319,Grover,Terrace,Město Libavá,783 06
+126,69772,Steensland,Crossing,Oskarshamn,572 60
+127,0,Clemons,Hill,Yuntan,75000
+128,587,Charing Cross,Crossing,Moscow,901993
+129,0372,Quincy,Pass,Miyakonojō,889-1912
+130,3,Troy,Crossing,Boro,75000
+131,3465,Banding,Point,Visby,621 46
+132,46,Tennessee,Parkway,Notre-Dame-de-l'Île-Perrot,H9X
+133,0,Bluestem,Pass,San Marcos,12001
+134,932,Harbort,Terrace,La Ravoire,73494 CEDEX
+135,36119,Dexter,Terrace,Tāndo Mittha Khān,40411
+136,07,Golden Leaf,Alley,Saint-Louis,68309 CEDEX
+137,200,Hayes,Court,Oliveira,3660-622
+138,7577,Columbus,Circle,Qiaotou,75000
+139,80,Blue Bill Park,Crossing,Bendilwungu Lor,75000
+140,431,Monument,Parkway,Helixi,75000
+141,29005,Eagan,Circle,Napak,75000
+142,10287,Mcbride,Place,Ampanihy,75000
+143,6,Towne,Avenue,Chone,75000
+144,4,Burrows,Avenue,Boulogne-Billancourt,92645 CEDEX
+145,87690,Sauthoff,Crossing,Shuangbaiyang,75000
+146,3,Hazelcrest,Street,Borehbangle,75000
+147,2450,Cardinal,Junction,Shuangfeng,75000
+148,178,American Ash,Alley,Xiping,75000
+149,95563,Duke,Court,Laoxingchang,75000
+150,06464,Ronald Regan,Parkway,Otra Banda,11805
+151,57,West,Circle,Ludu,75000
+152,137,Ruskin,Circle,Cheongpyeong,75000
+153,5,Delaware,Crossing,Qikeshu,75000
+154,5,Arkansas,Crossing,Bueng Kan,34140
+155,3,La Follette,Parkway,Skalat,75000
+156,5722,Esker,Crossing,Bairro,4620-091
+157,72,Colorado,Junction,Rizári,75000
+158,83,Truax,Trail,Halmstad,302 70
+159,3,Larry,Junction,Heku,75000
+160,0,Vidon,Park,Dortmund,44269
+161,829,Darwin,Crossing,Youxi,75000
+162,8,Welch,Road,Starokorsunskaya,385274
+163,907,Village Green,Street,28 de Noviembre,9407
+164,0588,Old Shore,Terrace,Saint-Étienne,42963 CEDEX 9
+165,94,Golden Leaf,Pass,Kamennyye Potoki,75000
+166,5634,Nelson,Drive,Marne-la-Vallée,77316 CEDEX 2
+167,429,Washington,Place,Olavarría,7400
+168,093,Bashford,Hill,Créteil,94039 CEDEX
+169,0742,East,Parkway,Hongshanzui,75000
+170,35,Northview,Way,Nowlamary,3731
+171,02348,Kipling,Crossing,Baoquan,75000
+172,728,Maryland,Pass,Ţayyibat al Imām,75000
+173,63556,Emmet,Way,Hanjiaji,75000
+174,825,Westridge,Pass,Rurrenabaque,75000
+175,6,Valley Edge,Court,Shengli,75000
+176,778,Thackeray,Point,Semamung,75000
+177,32,Loeprich,Court,Strabychovo,75000
+178,65296,Fairfield,Center,Qingliu,75000
+179,03,Clyde Gallagher,Court,Mirontsi,75000
+180,2342,Arizona,Crossing,Santa Maria da Vitória,47640-000
+181,9,Gina,Avenue,Sasovo,391448
+182,663,Novick,Crossing,Sizhou,75000
+183,2,Forest Dale,Lane,Battaramulla South,10600
+184,2472,Alpine,Pass,Kapuskasing,P5N
+185,8676,Maple Wood,Center,Baisha,75000
+186,144,Ronald Regan,Trail,Goiana,55900-000
+187,9286,Columbus,Lane,Sartrouville,78504 CEDEX
+188,99925,Sutherland,Alley,Agdzhabedy,75000
+189,98071,1st,Circle,Nirasaki,407-0176
+190,68162,Memorial,Point,Tabu,75000
+191,19,Donald,Center,Göteborg,401 24
+192,345,Northland,Pass,Zaozerne,75000
+193,718,Bluejay,Junction,Garland,75049
+194,5,East,Alley,Virojoki,46860
+195,90039,Meadow Ridge,Park,Baranusa,75000
+196,17,Graceland,Center,Khon Buri,30250
+197,6,Butterfield,Park,Beloha,75000
+198,26,Jana,Park,Kangān,75000
+199,565,Pearson,Road,Cimo de Vila,4615-092
+200,351,Lerdahl,Trail,Krajan,75000
+201,38258,Holmberg,Point,Kembé,75000
+202,7903,Glacier Hill,Plaza,San Antonio Suchitepéquez,10030
+203,8202,Coleman,Street,Rumburk,407 53
+204,42,Schiller,Circle,Egindiköl,75000
+205,65910,Iowa,Street,Al Qābil,75000
+206,3,Schlimgen,Avenue,Jieshou,75000
+207,876,Sutherland,Park,Glamoč,75000
+208,768,Melody,Terrace,Thionville,57119 CEDEX
+209,17700,Katie,Circle,Las Vegas,89105
+210,83121,Corscot,Center,Fyllingsdalen,5145
+211,165,Manufacturers,Drive,Chaloem Phra Kiat,30370
+212,74481,Rigney,Plaza,Stockholm,114 84
+213,9,Birchwood,Alley,Dayr al Ghuşūn,75000
+214,0343,Coolidge,Crossing,Baicheng,75000
+215,627,Scott,Plaza,Dalmeny,M4P
+216,0,Lake View,Alley,Khlong Toei,34360
+217,3,Jenifer,Parkway,São Miguel do Guamá,68660-000
+218,21488,Northport,Way,Yamada,999-6861
+219,648,Summerview,Court,Shevchenkove,75000
+220,19958,Dunning,Trail,Nakhon Pathom,40140
+221,5,Straubel,Drive,Spånga,163 41
+222,000,Clove,Center,Barisan,75000
+223,48775,Canary,Center,Llorente,6803
+224,12,Northridge,Circle,Laojun,75000
+225,7,Havey,Circle,Spodnja Hajdina,2325
+226,7,Graedel,Drive,Haukivuori,51601
+227,1,Fisk,Center,Ciudad Bolívar,75000
+228,98,Green Ridge,Drive,Ugac Sur,3501
+229,850,Blackbird,Way,Saint-Bruno-de-Montarville,J3V
+230,85,Talisman,Circle,Payxambabazar,75000
+231,568,Mosinee,Park,Chiang Khan,42110
+232,6105,Dahle,Avenue,Xiwei,75000
+233,973,Alpine,Trail,Cimanggu Wetan,75000
+234,2,Schlimgen,Hill,Limón,70101
+235,4,Ilene,Lane,Nahuo,75000
+236,10973,Golf Course,Parkway,Satipo,75000
+237,6,Mcbride,Street,Malusay,6214
+238,47,Esker,Point,Manuel Cavazos Lerma,88600
+239,20,Corben,Street,Tianhe,75000
+240,0797,Stuart,Way,Shatian,75000
+241,35185,Summerview,Junction,Wangjing,75000
+242,3471,Randy,Junction,Néa Kíos,75000
+243,1300,Green,Plaza,Patarrá,10307
+244,98689,Dayton,Center,La Jagua de Ibirico,203027
+245,51,Evergreen,Parkway,Tres Arroyos,6550
+246,10,Merrick,Road,Isugod,4336
+247,08,Division,Drive,Honolulu,96835
+248,335,Mosinee,Park,Bethanie,75000
+249,4206,Charing Cross,Street,Fengle,75000
+250,4487,Rieder,Pass,Cikijing,75000
+251,29725,Debra,Point,Sabandia,75000
+252,57,Northview,Trail,Krugersdorp,1933
+253,67876,Center,Hill,Capela,4960-320
+254,63,Nancy,Street,Qingminghe,75000
+255,48,Stone Corner,Junction,Jembe Timur,75000
+256,6,Farmco,Point,Saint-Augustin-de-Desmaures,G3A
+257,68801,Marcy,Alley,Pidhaytsi,75000
+258,9212,Anzinger,Park,Pahārpur,12251
+259,062,West,Plaza,Wangfu,75000
+260,6,2nd,Way,Gatak,75000
+261,212,Valley Edge,Lane,Ängelholm,262 34
+262,17,Calypso,Center,Kolodeznyy,396340
+263,0236,Glacier Hill,Trail,Menzel Abderhaman,75000
+264,8599,Hooker,Plaza,Las Ánimas,75000
+265,83625,Clarendon,Plaza,Saint-Louis,68309 CEDEX
+266,6331,Eagle Crest,Center,Deneysville,1932
+267,32052,Oriole,Road,Mariana,35420-000
+268,636,Rusk,Trail,Ar Rahad,75000
+269,343,Dunning,Road,Al Manqaf,75000
+270,38227,Bowman,Drive,Sumurber,75000
+271,1,Pankratz,Terrace,Bongao,7500
+272,1662,Crownhardt,Lane,Roma,00152
+273,7,Buell,Drive,København,1068
+274,98,Lukken,Center,Duanshen,75000
+275,7,Nevada,Junction,Dromiskin,W23
+276,8,Manley,Plaza,Rozhdestveno,399768
+277,1031,Center,Parkway,Detchino,249080
+278,240,Anniversary,Point,Osilnica,1337
+279,3,Summerview,Crossing,Almoínhas Velhas,2755-163
+280,2067,Bonner,Crossing,Bandar-e ‘Asalūyeh,75000
+281,20795,Thierer,Crossing,Itupiranga,68580-000
+282,98,David,Place,El Colorado,4618
+283,306,Blue Bill Park,Hill,Ngandangan,75000
+284,3821,Bellgrove,Terrace,Maying,75000
+285,5848,Brickson Park,Terrace,Fenoarivo Atsinanana,75000
+286,438,Maywood,Pass,Enschede,7534
+287,0291,Oak Valley,Road,Yefremov,301871
+288,86560,Mandrake,Center,Aroeira,2820-023
+289,54,Utah,Trail,Liutang,75000
+290,7538,Schurz,Street,Yangcheng,75000
+291,230,Cascade,Pass,Aguadas,172029
+292,4602,Prentice,Park,Carpentras,84204 CEDEX
+293,4321,Lotheville,Street,Gudong,75000
+294,0,Barby,Road,Nowa Sarzyna,37-310
+295,57569,Moulton,Point,Sanana,75000
+296,97211,Lotheville,Plaza,Varybóbi,75000
+297,957,Northport,Lane,Palmerston North,4820
+298,97,Old Shore,Crossing,Simão Dias,49480-000
+299,644,Union,Circle,Përmet,75000
+300,73,Grasskamp,Junction,Iradan,75000
+301,48851,Fallview,Circle,Aldeia de Além,2025-105
+302,52621,Cascade,Center,Phra Khanong,10260
+303,466,Sauthoff,Drive,Zaqatala,75000
+304,4,Chive,Terrace,Lixi,75000
+305,69,Montana,Crossing,Nanxinxiang,75000
+306,66,Monterey,Circle,Mtambile,75000
+307,34338,Mcbride,Center,Moscow,901993
+308,30,Bellgrove,Court,Santa Cruz,5400-674
+309,11889,Blaine,Trail,Cidima,75000
+310,49,Gina,Plaza,Cisalakdesa,75000
+311,91,Melody,Park,Ignacio Zaragoza,93470
+312,929,Packers,Street,Xipingle,75000
+313,716,Graedel,Hill,San Luis,8511
+314,344,Chive,Circle,Santa Rosa,98900-000
+315,645,Quincy,Plaza,Trelleborg,231 43
+316,652,Prairieview,Alley,Gotemba,412-0048
+317,8,Aberg,Parkway,Lomme,59468 CEDEX
+318,8,Algoma,Park,Fukagawa,999-7767
+319,29,Oxford,Lane,Taizhou,75000
+320,8087,Blue Bill Park,Trail,Naushahro Fīroz,67131
+321,32,Stuart,Hill,Lukou,75000
+322,64072,Johnson,Point,Dahuaishu,75000
+323,04,Everett,Street,Penamacor,6090-511
+324,617,Oak Valley,Junction,Jadranovo,51264
+325,2162,Jenna,Parkway,Pop Shahri,75000
+326,69750,Hanover,Drive,Monte Mor,13190-000
+327,62899,Magdeline,Way,Al Mazra‘ah,75000
+328,88375,Lunder,Terrace,Pampamarca,75000
+329,018,Red Cloud,Court,Haapsalu,75000
+330,7,Holmberg,Center,Palmerston North,4820
+331,29,Arkansas,Street,Cimrutu,75000
+332,93,Portage,Street,La Palma,40914
+333,8643,Sullivan,Court,Markaz al Marīr,75000
+334,2778,Prentice,Way,Sv. Trojica v Slov. Goricah,2236
+335,58,Fairview,Plaza,Voi,75000
+336,79,Golf Course,Court,Kaédi,75000
+337,46850,Grayhawk,Crossing,Jingcheng,75000
+338,72,Glendale,Drive,Santo Amaro,44200-000
+339,23,Blue Bill Park,Avenue,Carvoeira,2655-034
+340,45386,Nova,Alley,Dadaha,75000
+341,685,Fisk,Point,Cortinhas,4960-320
+342,108,Logan,Way,Cabean,75000
+343,12,Bartelt,Point,Lewobelek,75000
+344,21,Sutherland,Parkway,Pasarkuok,75000
+345,7105,Fieldstone,Road,Sastöbe,75000
+346,7096,Merchant,Crossing,Bulqizë,75000
+347,228,Nobel,Point,Palmerston North,4820
+348,0,Prairie Rose,Plaza,Dongming,75000
+349,36705,Delladonna,Alley,Babakankadu,75000
+350,07,Bellgrove,Crossing,Újezd,789 85
+351,17,Russell,Court,Saint-Chamond,42404 CEDEX
+352,5,Loftsgordon,Hill,Nieying,75000
+353,2,Esker,Road,Luzino,84-242
+354,231,Springs,Court,İsmayıllı,75000
+355,3181,Old Shore,Drive,Soavinandriana,75000
+356,5922,7th,Avenue,Talibura,75000
+357,454,Barby,Avenue,Hargeysa,75000
+358,7645,Twin Pines,Court,Huangzhuang,75000
+359,2,Corscot,Place,Foshan,75000
+360,341,Susan,Trail,Đạ Tẻh,75000
+361,3,Bartillon,Junction,Maikun,75000
+362,92,Huxley,Center,Buket Teukuh,75000
+363,17774,Manufacturers,Pass,Hato Mayor del Rey,11807
+364,959,Delaware,Street,Yucun,75000
+365,73,Carpenter,Crossing,San Diego,92165
+366,43359,Mitchell,Terrace,Kafr al Labad,75000
+367,50147,Cottonwood,Pass,Kosum Phisai,44140
+368,80276,Myrtle,Place,Sepolong Timur,75000
+369,298,Old Shore,Alley,Hualian,75000
+370,447,Lakeland,Trail,Kanbula,75000
+371,79,Sunnyside,Crossing,Weepangali,75000
+372,3692,East,Court,Gujiadian,75000
+373,5833,Manitowish,Drive,Balayong,7213
+374,4,Pond,Circle,Ngundaan,75000
+375,805,Lindbergh,Circle,Port-de-Bouc,13524 CEDEX
+376,8100,Nelson,Trail,Muhos,91501
+377,60,Melvin,Parkway,Kylmäkoski,37960
+378,032,Pepper Wood,Plaza,Fray Luis A. Beltrán,2156
+379,85,Declaration,Avenue,Carlton,DL8
+380,8,Blue Bill Park,Hill,Tuburan,7306
+381,9,Tony,Place,Riosucio,178057
+382,1830,Shasta,Point,Xinli,75000
+383,3975,Schmedeman,Alley,Hexing,75000
+384,8,Fairview,Park,Thành Phố Bà Rịa,75000
+385,46825,Lindbergh,Place,Chicago,60681
+386,074,International,Junction,Melenki,602103
+387,7980,Everett,Center,Las Vegas,89160
+388,875,Beilfuss,Circle,Zhangjiachang,75000
+389,939,2nd,Circle,Pýli,75000
+390,76093,Loomis,Point,Liboran,7413
+391,5,Fallview,Pass,Xinglong,75000
+392,7181,Sage,Lane,Kiiminki,90901
+393,9293,5th,Point,Palaihari,75000
+394,73813,Packers,Park,Caibarién,75000
+395,416,Buell,Junction,Cuauhtemoc,62767
+396,5,Mariners Cove,Place,Ganshui,75000
+397,08665,Tomscot,Street,Dadapan,75000
+398,54,Kedzie,Crossing,Taunan,75000
+399,6390,7th,Drive,Kebon,75000
+400,0,Monterey,Circle,Bello,051059
+401,74,International,Hill,Chợ Gạo,75000
+402,5241,Arapahoe,Trail,Bukuru,75000
+403,244,Buena Vista,Center,Huangjiazhai,75000
+404,016,Hauk,Terrace,Lamawalang,75000
+405,808,Mallory,Place,Ubá,36500-000
+406,3207,Melrose,Road,Log pri Brezovici,1358
+407,493,Sundown,Pass,Łąka Prudnicka,02-158
+408,341,David,Center,Yanqul,75000
+409,20481,Elka,Crossing,Złotoryja,59-501
+410,914,Golf Course,Circle,Kawm Ḩamādah,75000
+411,73,Moland,Way,Saint-Denis,93209 CEDEX
+412,6347,Holy Cross,Alley,Skole,75000
+413,62,Corscot,Alley,Berdorf,L-6562
+414,4544,Butterfield,Junction,Lidköping,531 93
+415,30790,Merchant,Place,Nova Viçosa,45920-000
+416,02,Village,Trail,Cernay,68704 CEDEX
+417,0,Cherokee,Circle,Farsta,123 71
+418,01,Marquette,Court,Nigel,1590
+419,76023,Pepper Wood,Center,Shuangshipu,75000
+420,4527,Mifflin,Crossing,Jinshanzui,75000
+421,5,Coolidge,Road,Maia,9625-325
+422,09618,Kenwood,Parkway,Duncan Town,75000
+423,6049,Ruskin,Park,Dmanisi,75000
+424,87,Maple,Plaza,Staré Hradiště,533 52
+425,88245,Quincy,Park,Kotovs’k,75000
+426,17,Colorado,Park,Pervomayskoye,659607
+427,05,Gina,Pass,Bigoudine,75000
+428,34570,Fordem,Pass,Khairpur Nathan Shāh,79001
+429,63938,Sage,Way,München,80686
+430,69,Aberg,Circle,Agrelo,4730-300
+431,06,Emmet,Plaza,Bianba,75000
+432,4478,Lerdahl,Drive,Imbang,6116
+433,8,Derek,Trail,Yangkou,75000
+434,3,Leroy,Circle,Yanwo,75000
+435,79,Talisman,Circle,Vista Hermosa,75000
+436,0367,Toban,Center,Tongjin,75000
+437,1873,Helena,Terrace,Verin Artashat,75000
+438,3861,Hayes,Pass,Cotorra,230507
+439,7,La Follette,Drive,Khiv,368692
+440,71406,Pennsylvania,Terrace,Guanba,75000
+441,2779,Northwestern,Plaza,Lyon,69907 CEDEX 20
+442,098,Oak,Court,Aragarças,76240-000
+443,00,Memorial,Terrace,Zhashkiv,75000
+444,3,Autumn Leaf,Place,Avignon,84902 CEDEX 9
+445,04,Laurel,Pass,Maurole,75000
+446,08473,Graedel,Point,Sumqayıt,75000
+447,7,Coleman,Terrace,Rusocice,34-115
+448,63109,Mcguire,Crossing,Machico,9200-088
+449,0,Duke,Avenue,Biga,7031
+450,14,Golf,Crossing,Nis’oni,75000
+451,7415,Muir,Drive,Jiaxing,75000
+452,631,Old Gate,Point,Svedala,233 94
+453,5,Prentice,Hill,Voorburg,2274
+454,27,Florence,Plaza,Tinogasta,5340
+455,9217,Mendota,Road,Doropeti,75000
+456,25,Pine View,Pass,Nyazepetrovsk,422505
+457,497,Longview,Street,Skórcz,83-220
+458,320,Dennis,Crossing,Zhongfang,75000
+459,1,Cambridge,Court,Allen,8328
+460,6,Mariners Cove,Road,Betong,95110
+461,43,Almo,Junction,Torsby,685 24
+462,6,Pepper Wood,Circle,Belanting,75000
+463,6,Rockefeller,Drive,Darkovice,747 17
+464,43221,Mockingbird,Way,Esperança,58135-000
+465,01668,Vermont,Park,Merklín,334 52
+466,828,Ryan,Court,Cimenga,75000
+467,03,Hansons,Point,Laxiong,75000
+468,0,Cottonwood,Trail,Concórdia,89700-000
+469,712,Crescent Oaks,Avenue,Armenta,75000
+470,847,Messerschmidt,Junction,Orlovo,396130
+471,605,Lakewood Gardens,Pass,Indianapolis,46254
+472,7,Dapin,Park,Béthune,62411 CEDEX
+473,04,Hallows,Hill,Lyubokhna,242622
+474,0,American Ash,Trail,Bulasa,0802
+475,1,Blue Bill Park,Court,Kostopil’,75000
+476,4,Colorado,Drive,Gunungangka,75000
+477,98944,Caliangt,Point,Cidadap,75000
+478,28,Larry,Trail,Jiangyou,75000
+479,477,Sherman,Drive,Jiaojie,75000
+480,488,Weeping Birch,Plaza,Kuala Terengganu,20576
+481,1980,Buena Vista,Plaza,New Orleans,70116
+482,366,Monument,Lane,Ventspils,75000
+483,05780,Corscot,Trail,Fangzheng,75000
+484,91513,Del Sol,Point,Alingsås,441 92
+485,357,Bluestem,Lane,Cajolá,09034
+486,20469,Gateway,Lane,Mojorejo,75000
+487,642,Pleasure,Drive,Baumata,75000
+488,33307,Fremont,Hill,Linzi,75000
+489,682,South,Circle,Wakema,75000
+490,2,Killdeer,Hill,Dafengdui,75000
+491,3955,Fuller,Junction,Zaoxi,75000
+492,569,Hanover,Road,Honglu,75000
+493,32,Di Loreto,Plaza,Neebing,P7L
+494,6761,Mosinee,Lane,Burnside,EH52
+495,9,Rusk,Parkway,Los Frentones,3712
+496,6393,Northridge,Street,Roubaix,59073 CEDEX 1
+497,3664,Stoughton,Plaza,Kalmar,392 41
+498,836,Lyons,Lane,Matagbak,9504
+499,3011,Novick,Alley,Golbey,88194 CEDEX
+500,3298,Burrows,Place,Pader Palwo,75000
+501,146,Lyons,Court,Labège,31678 CEDEX
+502,907,Arapahoe,Trail,Qorovulbozor Shahri,75000
+503,6283,Dayton,Street,Mashiko,321-4217
+504,9,Prentice,Center,Vladimir,356555
+505,1020,Waxwing,Place,Meliau,75000
+506,020,Westerfield,Hill,Boluo,75000
+507,8,Ronald Regan,Alley,Qianzhou,75000
+508,29010,Surrey,Point,Xiuying,75000
+509,30,Stoughton,Park,Dongzaogang,75000
+510,7148,Acker,Center,Sibulan,6201
+511,5,South,Lane,Charneca,2750-524
+512,50,Warner,Court,Curibaya,75000
+513,025,Rutledge,Way,Pamplona/Iruña,31015
+514,72047,Derek,Point,Bavorov,387 73
+515,236,Melody,Terrace,Tullich,AB55
+516,25318,American Ash,Plaza,Ryazhsk,391964
+517,4779,Cascade,Pass,Sagua la Grande,75000
+518,66088,Warbler,Court,Temirtau,75000
+519,0599,Straubel,Point,Bojonghaur,75000
+520,0,Stephen,Trail,'s-Hertogenbosch,5234
+521,03,Kim,Junction,Suwaru,75000
+522,3921,Talisman,Drive,Murmashi,184358
+523,32,Sachs,Pass,Napak,75000
+524,3,Bultman,Circle,Sérifos,75000
+525,07,West,Pass,Lagyná,75000
+526,38351,Grim,Drive,Mlangali,75000
+527,07742,Roxbury,Parkway,Vila Nova,4710-627
+528,56,Amoth,Alley,Longvic,21604 CEDEX
+529,5,Beilfuss,Parkway,Lukou,75000
+530,773,Valley Edge,Crossing,Mae Hi,58130
+531,4436,Cottonwood,Parkway,Alvaiázere,3250-104
+532,53666,Victoria,Plaza,Bački Petrovac,75000
+533,572,Division,Trail,Columbus,43220
+534,838,Warbler,Alley,Khvastovichi,249360
+535,9,Muir,Junction,Aloleng,2408
+536,32,Lyons,Drive,Dalinhe,75000
+537,18924,Anzinger,Parkway,Cartagena,130027
+538,99276,Surrey,Parkway,San Isidro,41004
+539,375,Esch,Plaza,Riebiņi,75000
+540,31,Briar Crest,Alley,Sanquan,75000
+541,11272,3rd,Circle,Yamaga,874-0818
+542,8242,Superior,Court,Drammen,3027
+543,8,East,Plaza,Shebalino,649220
+544,32750,Trailsway,Street,Cishangang,75000
+545,01,Summit,Terrace,Rungis,94636 CEDEX 1
+546,9,Hooker,Center,Bayanbulag,75000
+547,522,Golf,Lane,Zouma,75000
+548,475,Sutteridge,Court,Zhalinghu,75000
+549,81,Shopko,Street,Sekondi-Takoradi,75000
+550,9,Talmadge,Court,Liběšice,506 01
+551,57663,Crescent Oaks,Street,Kanekomachi,371-0858
+552,63629,Gateway,Crossing,Huanghe,75000
+553,74141,Badeau,Street,Costa Sacate,5961
+554,67,Mallard,Parkway,Landi Kotal,24740
+555,0,Bunting,Drive,Neuquén,8300
+556,9007,Hagan,Way,Half Way Tree,75000
+557,78864,Del Mar,Pass,Palmira,763547
+558,57874,Harper,Junction,Oeri’u,75000
+559,1,Mccormick,Junction,Trondheim,7409
+560,988,Pankratz,Place,Mahendranagar,75000
+561,83214,Jenifer,Way,Binabaan,5034
+562,10,Farragut,Road,Onueke,75000
+563,1734,Moose,Alley,Shreveport,71115
+564,835,Texas,Park,Batiano,4115
+565,19956,Paget,Lane,Montaneza,6029
+566,847,Cordelia,Park,Biyang,75000
+567,95,Sunnyside,Way,Puerto Francisco de Orellana,75000
+568,7,Bonner,Trail,Gōdo,503-2429
+569,39,Sachs,Trail,Nerópolis,75460-000
+570,83,Helena,Court,Ntonggu,75000
+571,959,Eggendart,Crossing,Puerto Colombia,941047
+572,6832,Meadow Valley,Alley,Pleszew,63-301
+573,842,Northland,Point,Jaworze,43-384
+574,924,Monument,Pass,Guoxiang,75000
+575,420,Forster,Alley,La Unión,521529
+576,54112,Crownhardt,Alley,Viale,3109
+577,84,Roxbury,Parkway,Becerril,8504
+578,27239,Bellgrove,Park,Ekerö,178 32
+579,93,Nevada,Court,Nueva Guadalupe,75000
+580,6063,Memorial,Parkway,Na Kae,48130
+581,69860,Coleman,Avenue,Richard-Toll,75000
+582,019,South,Place,Zhangyelu,75000
+583,60289,Butternut,Pass,Burqah,75000
+584,05,Fallview,Circle,Kamenka,412378
+585,450,Fulton,Parkway,Jayyūs,75000
+586,45,Cascade,Junction,Luxi,75000
+587,10,Farmco,Place,Shache,75000
+588,33091,Sunbrook,Way,Budapest,1194
+589,2,Jackson,Alley,Gagnoa,75000
+590,84,Tennessee,Circle,Straldzha,8693
+591,28,Holmberg,Way,Dhangarhi,75000
+592,13566,Little Fleur,Lane,Tarata,75000
+593,89695,Amoth,Crossing,Carig,3503
+594,78260,Havey,Terrace,Emar,169635
+595,0184,Vahlen,Pass,Orange,84878 CEDEX
+596,58,Delladonna,Park,München,80686
+597,6392,3rd,Court,Karangmulya,75000
+598,4,Anzinger,Point,Kozyatyn,75000
+599,88,Canary,Street,Venëv,301320
+600,18789,Bultman,Drive,General Enrique Mosconi,3636
+601,3183,Walton,Circle,Kotakan Selatan,75000
+602,8,La Follette,Trail,Koubia,75000
+603,19,Clemons,Hill,Przeworsk,37-240
+604,20,Tony,Circle,Beraim,75000
+605,303,Northwestern,Way,Badīn,72200
+606,6364,Algoma,Place,Nacka,131 22
+607,735,Weeping Birch,Road,Chvalšiny,382 08
+608,5769,Crowley,Road,Vukovar,32010
+609,745,Mesta,Road,Trzcińsko Zdrój,74-510
+610,5,Kropf,Pass,Yinzhu,75000
+611,00,Nancy,Street,Guanzhuang,75000
+612,189,David,Drive,Glagahan,75000
+613,2640,Ridgeway,Drive,Huamu,75000
+614,544,Miller,Point,Huangshanguan,75000
+615,84950,Hallows,Point,Zhili,75000
+616,1655,Forster,Terrace,Ifo,75000
+617,746,Mallory,Trail,Kiryandongo,75000
+618,4056,Manley,Hill,Geita,75000
+619,1,Mosinee,Point,Itapeva,18400-000
+620,09624,Buena Vista,Circle,Ust’ye,161140
+621,15,Merrick,Circle,Embalse,5856
+622,09261,Donald,Trail,Russkiy,690922
+623,85814,Continental,Crossing,Ngembul,75000
+624,2502,6th,Court,Tōbetsu,883-0103
+625,91083,Burrows,Parkway,Chumikan,682560
+626,100,Lakeland,Place,Bagikkedok Lauk,75000
+627,2,Anhalt,Circle,Cihaurbeuti,75000
+628,2881,West,Terrace,Gornji Petrovci,9206
+629,81,Redwing,Drive,Yemva,169205
+630,5,Arkansas,Crossing,Ogawa,989-2471
+631,8,Cody,Center,Moijabana,75000
+632,07129,Evergreen,Trail,Nagutskoye,357239
+633,584,Fairview,Drive,San Juan,6227
+634,62097,Blaine,Hill,Picoto,4620-400
+635,5,Bluestem,Point,Bugo,9222
+636,9165,Express,Hill,Zhdanov,75000
+637,5,Waxwing,Avenue,Sindangheula,75000
+638,58040,Southridge,Point,Zboriv,75000
+639,69627,Corben,Parkway,Dikhil,75000
+640,1404,Karstens,Center,Jami,75000
+641,74591,Almo,Drive,Dhahi,75000
+642,10869,Meadow Ridge,Plaza,Tamorot,75000
+643,1577,Ridgeway,Lane,Rawson,9103
+644,46,Pleasure,Circle,Montería,230029
+645,286,Ruskin,Way,Tapayan,1711
+646,1618,Johnson,Crossing,Baler Baleagung,75000
+647,608,Pierstorff,Avenue,Pulap,75000
+648,4460,Merchant,Way,San Andrés,75000
+649,4,Quincy,Avenue,Ipatinga,35160-000
+650,88,Colorado,Lane,Panzhuang,75000
+651,76397,Morningstar,Pass,Gongxi,75000
+652,26100,Village,Park,Longxing,75000
+653,62670,Maryland,Way,Charlottenberg,673 31
+654,9,Scofield,Road,Ketangi,75000
+655,23,Jenifer,Court,Santo André,09000-000
+656,86,Northwestern,Circle,Kayanza,75000
+657,0234,West,Crossing,Arranhó,2630-015
+658,87487,Armistice,Hill,Ad Dīs ash Sharqīyah,75000
+659,866,Stoughton,Terrace,Gangbian,75000
+660,6044,Dawn,Plaza,Burirao,9222
+661,9064,Springview,Alley,Kostanay,75000
+662,668,Bultman,Junction,San Juan,3611
+663,5,Dapin,Court,Luleå,972 42
+664,3,Jana,Crossing,Ténenkou,75000
+665,0472,Atwood,Alley,Philipsburg,75000
+666,746,Sugar,Hill,Nekla,62-330
+667,24,Northport,Park,Dahewan,75000
+668,10231,Portage,Way,Rathwire,Y25
+669,5,Barby,Parkway,Seattle,98104
+670,4,Harper,Pass,Xiabaishi,75000
+671,611,Marcy,Place,Villefranche-sur-Mer,06239 CEDEX
+672,2891,Norway Maple,Park,Lāchi,26360
+673,43,Sherman,Pass,Kadujangkung,75000
+674,436,Nobel,Parkway,Gersikputih Tengah,75000
+675,6041,Kipling,Point,Proptisht,75000
+676,734,Thompson,Crossing,Wonotirto,75000
+677,9,South,Court,Uherský Ostroh,687 24
+678,3,Doe Crossing,Pass,Cuamba,75000
+679,582,Stang,Pass,Russkiy,690922
+680,7510,Melvin,Pass,Gordeyevka,243650
+681,7418,Iowa,Center,Baliang,75000
+682,9,Sommers,Crossing,Dālbandīn,95100
+683,2,Kings,Place,Urzuf,75000
+684,42,Lillian,Plaza,Krajan Jabungcandi,75000
+685,2248,Del Mar,Place,Candoso,5360-035
+686,5,Graceland,Terrace,Sulbiny Górne,08-420
+687,37,Steensland,Lane,Carvalhal,3450-301
+688,83924,Oriole,Circle,Van Nuys,91499
+689,359,Becker,Terrace,Best,5684
+690,94209,Mariners Cove,Center,Sathon,10130
+691,4479,Butterfield,Court,Bolian,75000
+692,4945,Straubel,Junction,Kembé,75000
+693,75216,Hanson,Crossing,Poitiers,86083 CEDEX 9
+694,0604,Drewry,Street,Quinta de Valadares,2855-358
+695,9,Warbler,Point,Shankill,A98
+696,13420,Elgar,Way,Aydūn,75000
+697,55,Sheridan,Crossing,Vila Maior,4525-485
+698,87,Erie,Hill,Youzha,75000
+699,183,Maryland,Terrace,Concepción de La Vega,10135
+700,53,Summerview,Plaza,Verkhozim,442443
+701,6,Spenser,Plaza,Figueira dos Cavaleiros,7900-234
+702,92,Bayside,Alley,Kalapagenep,75000
+703,103,American Ash,Junction,Shuangwang,75000
+704,2,Bay,Parkway,Changyuan,75000
+705,32,Goodland,Avenue,Huallanca,75000
+706,13095,Comanche,Center,Patenongan,75000
+707,81,Shoshone,Terrace,Enskede,122 44
+708,3591,Chive,Junction,Archis,75000
+709,91380,Tennessee,Pass,Qijiaxi,75000
+710,46369,Paget,Center,Huyu,75000
+711,02,Spaight,Terrace,Janiuay,5034
+712,66,Kedzie,Drive,San Pa Tong,50120
+713,67329,Bultman,Pass,Hwaseong-si,75000
+714,4,Hayes,Plaza,Kalapagenep,75000
+715,8585,Maywood,Pass,Olds,T4H
+716,9065,Maryland,Park,Żórawina,55-020
+717,65,Loeprich,Plaza,Bicaj,75000
+718,38,Corry,Road,Añelo,8305
+719,30,Red Cloud,Court,Amadora,2610-006
+720,29,Barby,Pass,Nevyts’ke,75000
+721,5075,Charing Cross,Drive,Thorpe,BD23
+722,8,Eagle Crest,Hill,Ngetkib,75000
+723,6,Center,Pass,Waipare,75000
+724,44,Debra,Street,Messíni,75000
+725,7031,Michigan,Park,Hekou,75000
+726,051,Continental,Parkway,Dongchengyuan,75000
+727,50768,Loomis,Road,Pasauran,75000
+728,04799,Canary,Place,Hecun,75000
+729,895,Blackbird,Point,Santa Valha,5430-236
+730,7,Mosinee,Center,Sut-Khol’,668150
+731,00485,Blaine,Point,Abashiri,408-0021
+732,132,Oneill,Place,Kourou,97374 CEDEX
+733,7690,Menomonie,Hill,Basiong,75000
+734,15043,Milwaukee,Pass,Jönköping,553 02
+735,742,Killdeer,Parkway,Cariaco,75000
+736,1,Donald,Trail,Zürich,8023
+737,535,Mosinee,Place,Lipu,75000
+738,15,Mockingbird,Lane,Le Bourget-du-Lac,73379 CEDEX
+739,28664,Ryan,Junction,Mogi das Cruzes,69110-000
+740,828,Scott,Park,Aíyira,75000
+741,1,Moose,Road,Spasskoye-Lutovinovo,303002
+742,119,Namekagon,Point,Concordia,5046
+743,27700,Bartillon,Terrace,Ulme,2140-368
+744,18217,Washington,Circle,Vetluzhskiy,606700
+745,5,Stoughton,Plaza,Sambuluan,1144
+746,940,Fallview,Way,Rapas,75000
+747,2400,Vermont,Place,Kapakabisa,75000
+748,772,Katie,Way,Nackawic,E6G
+749,8449,Kingsford,Street,Abaetetuba,68440-000
+750,10124,Garrison,Crossing,Philadelphia,19141
+751,2,Main,Pass,Charneca da Cotovia,2970-833
+752,6,Pine View,Plaza,San Francisco,75000
+753,51,Grayhawk,Parkway,Carmen,9408
+754,810,Anderson,Circle,Rybnoye,400036
+755,57147,Hovde,Park,Berezivka,75000
+756,23607,Superior,Terrace,Francisco I Madero,93995
+757,506,Acker,Place,Prince Albert,S6W
+758,97450,Garrison,Parkway,Dadus,9608
+759,113,Vermont,Court,Lincuo,75000
+760,4,Jenna,Crossing,Dongshan,75000
+761,5,Texas,Lane,Guodu,75000
+762,91829,Kensington,Place,Gingsir,75000
+763,46,Riverside,Junction,Samoš,75000
+764,4,Lakewood Gardens,Trail,Kushtia,7052
+765,37,Barby,Trail,Banqiao,75000
+766,5619,Lake View,Crossing,Avignon,84033 CEDEX 3
+767,882,Montana,Circle,Olupona,75000
+768,9,Oak Valley,Hill,Tinabogan,75000
+769,46595,Anzinger,Park,La Esperanza,75000
+770,02757,Arkansas,Avenue,Ḩuraytān,75000
+771,7,Victoria,Road,Sovetskaya Gavan’,682803
+772,9471,Rockefeller,Pass,Thoeng,57160
+773,7275,Cordelia,Plaza,Zumarraga,6725
+774,2,Killdeer,Street,Bantar Tengah,75000
+775,416,Weeping Birch,Center,Kalangan,75000
+776,1034,Sunfield,Parkway,Łącko,33-390
+777,5614,Express,Center,Baiba,75000
+778,49218,Waywood,Way,Oliveirinha,3430-393
+779,17,Lakewood,Crossing,Ibaraki,649-1211
+780,8,Loomis,Trail,Sicaya,75000
+781,47497,Oxford,Lane,Muyinga,75000
+782,38,Miller,Parkway,Siquanpu,75000
+783,93614,Quincy,Terrace,Huomachong,75000
+784,79,Goodland,Street,Banjar Susut Kaja,75000
+785,0994,Elmside,Road,Kruševac,75000
+786,646,Sugar,Parkway,Makui,75000
+787,3,Farragut,Trail,Öjebyn,943 36
+788,78247,Kipling,Drive,Soure,3130-199
+789,42953,Larry,Parkway,Inari,99871
+790,3,Westridge,Place,Moju,68450-000
+791,71060,Manitowish,Trail,Songhu,75000
+792,944,Emmet,Court,Budagovo,665236
+793,2,Everett,Junction,Nusajaya,79518
+794,157,Jenifer,Way,Теарце,1225
+795,91,Northwestern,Plaza,Youxi,75000
+796,29,Green,Place,Sanshan,75000
+797,54251,Hallows,Plaza,Cikarang,75000
+798,4324,4th,Center,Diego de Almagro,75000
+799,36,Vidon,Crossing,Nanterre,92019 CEDEX
+800,58456,Ronald Regan,Alley,Algés,1495-005
+801,14,Gulseth,Pass,Kranjska Gora,4280
+802,04,Sommers,Lane,Jinjiahe,75000
+803,6,Linden,Trail,Shetangpo,75000
+804,3,Bartelt,Hill,Jeponkrajan,75000
+805,511,Onsgard,Lane,Dadong,75000
+806,325,Forest Run,Street,Sumilao,8701
+807,3860,Grasskamp,Lane,Spanish Wells,75000
+808,880,Oxford,Terrace,Am Djarass,75000
+809,61063,Delladonna,Avenue,Pom Prap Sattru Phai,10100
+810,6,Corben,Center,Casal da Anja,2430-620
+811,80,Utah,Street,Kanchanaburi,31110
+812,50,1st,Trail,Montpellier,34080
+813,6018,Melody,Point,Zelenogorsk,197720
+814,80602,Thompson,Road,Macheng,75000
+815,8217,Sutteridge,Center,Picton,S0H
+816,2299,Fieldstone,Street,Chantilly,60647 CEDEX
+817,8,Nancy,Road,Crespo,3116
+818,8196,Nova,Point,Wakefield,75000
+819,7,Ridge Oak,Avenue,Kwikila,75000
+820,13693,Warrior,Place,Drakino,397943
+821,7,Merchant,Point,Ash Shafā,75000
+822,1613,Johnson,Hill,Wuqiao,75000
+823,598,Garrison,Place,Chashan,75000
+824,107,Stone Corner,Court,Vybor,182460
+825,593,Havey,Street,Gjirokastër,75000
+826,77448,Oneill,Street,Draguignan,83300
+827,17470,Laurel,Place,Batumi,75000
+828,17,Blue Bill Park,Terrace,Drenova,51301
+829,23297,Tomscot,Alley,Kohila,75000
+830,86677,Forest Dale,Parkway,Florence,29505
+831,39134,Dunning,Hill,Yanggan,75000
+832,6863,Del Mar,Parkway,Jixiang,75000
+833,750,Delladonna,Place,Nishinoomote,891-3101
+834,55599,Pawling,Lane,Yamoussoukro,75000
+835,455,6th,Park,Satu Nou,737513
+836,14690,Anzinger,Center,Genengan Kulon,75000
+837,1810,Fremont,Street,Mosoc Llacta,75000
+838,5,Banding,Park,Mithi,69230
+839,35,Autumn Leaf,Hill,Bua Yai,30120
+840,201,Namekagon,Park,Omu Aran,75000
+841,0382,Larry,Street,Nishiwaki,679-1212
+842,84807,Northridge,Court,Trzebunia,32-438
+843,33847,Susan,Avenue,Comodoro Rivadavia,9000
+844,5768,Elgar,Street,Khlong Luang,12120
+845,8,Northridge,Avenue,Marull,5139
+846,424,Hudson,Trail,Uritsk,102471
+847,800,Annamark,Hill,Tëploye,242522
+848,218,Monument,Parkway,Puračić,75000
+849,88059,Monica,Terrace,Altares,9700-308
+850,7283,East,Avenue,Camajuaní,75000
+851,7,Hanson,Park,Piekielnik,34-472
+852,87,Milwaukee,Court,Rundeng,75000
+853,94,Dottie,Hill,Altkirch,68134 CEDEX
+854,7378,Golden Leaf,Lane,Zastron,9951
+855,4731,Delladonna,Point,Manjing,75000
+856,34,Express,Road,Xiheshan,75000
+857,572,Moulton,Crossing,Kota Kinabalu,88661
+858,285,Derek,Crossing,Břeclav,690 02
+859,789,8th,Circle,Erhaodi,75000
+860,600,Superior,Park,Göteborg,415 07
+861,8,Scott,Pass,Maracha,75000
+862,9876,Tennyson,Alley,Piterka,393995
+863,90444,Veith,Alley,Gayamsari,75000
+864,6085,Jay,Crossing,Gonbad-e Kāvūs,75000
+865,38,South,Park,Stockholm,105 22
+866,24088,Corry,Point,Medvedevo,425239
+867,6,Holmberg,Avenue,Juvisy-sur-Orge,91265 CEDEX
+868,51885,Milwaukee,Plaza,Zhanqian,75000
+869,7,Anthes,Alley,Wenhe,75000
+870,26,Schmedeman,Crossing,Ash Shajarah,75000
+871,51704,Lake View,Trail,Vília,75000
+872,8,Texas,Place,Xinmen,75000
+873,002,High Crossing,Alley,Long’anqiao,75000
+874,4,Manufacturers,Way,Lamalewar,75000
+875,914,Scofield,Terrace,Chalan Pago-Ordot Village,96931
+876,5,Transport,Plaza,Suodenniemi,04501
+877,6232,Southridge,Center,Los Guayos,75000
+878,39118,Bunting,Junction,Lens,62304 CEDEX
+879,1,Jay,Way,Xujiaqiao,75000
+880,39,Rusk,Trail,Krajan Craken,75000
+881,08673,Moulton,Avenue,Lagawe,3600
+882,8,Kim,Circle,Bergen,5035
+883,62134,Veith,Street,Zagreb - Centar,10020
+884,25238,Oneill,Drive,Hepu,75000
+885,5,Arrowood,Road,Puerto Mayor Otaño,75000
+886,9,Troy,Circle,Kiev,75000
+887,887,Vahlen,Plaza,Changwon,75000
+888,04940,Milwaukee,Terrace,Bledzew,66-350
+889,6,2nd,Junction,Sarnaki,08-220
+890,351,Merry,Junction,Brataj,75000
+891,2,Aberg,Parkway,Kubang,75000
+892,0,Buhler,Terrace,Pellegrini,9017
+893,973,Mosinee,Parkway,Panimbang,75000
+894,26,Ludington,Lane,Hokor,75000
+895,49,Miller,Way,Jīwani,28360
+896,64,Nelson,Point,Xikou,75000
+897,883,Carioca,Parkway,Colegiales,1871
+898,2657,East,Hill,Vadstena,592 40
+899,09683,Browning,Street,Ketampak,75000
+900,77,Lindbergh,Place,Kafr Baţnā,75000
+901,88835,Eagle Crest,Hill,Hewan,75000
+902,75,Glendale,Crossing,Namayingo,75000
+903,27,Dexter,Circle,Chiang Yuen,44160
+904,98688,Hudson,Way,Mondorf-les-Bains,L-5659
+905,44459,Sauthoff,Plaza,Nunbaundelha,75000
+906,888,Ryan,Lane,Fedorovka,75000
+907,4,Luster,Lane,Cruz,4605-431
+908,52568,Arizona,Drive,Áno Merá,75000
+909,36,Forest Dale,Parkway,Mādabā,75000
+910,97275,Thackeray,Center,Huangqiao,75000
+911,64,Dixon,Way,Bokani,75000
+912,0,Miller,Court,Paços de Ferreira,4590-170
+913,9179,Butternut,Parkway,Kandi,75000
+914,771,Carberry,Plaza,Zwolle,8044
+915,91,Mariners Cove,Court,Mākū,75000
+916,69,Browning,Drive,Malczyce,55-320
+917,32,Donald,Park,Valmiera,75000
+918,84,Kinsman,Avenue,Trat,54150
+919,9,Kedzie,Plaza,Roubaix,59055 CEDEX 1
+920,477,Onsgard,Hill,Hongxing,75000
+921,85213,Westridge,Junction,Pyongyang,75000
+922,25,Sommers,Park,Sirnaresmi,75000
+923,30382,Rigney,Terrace,Tobruk,75000
+924,9,Northwestern,Way,Betong,95110
+925,4749,Maywood,Trail,Celestynów,05-430
+926,23857,Magdeline,Junction,Chornukhy,75000
+927,246,Welch,Trail,Yashkul’,359150
+928,671,Carpenter,Circle,Kinsale,P17
+929,4,Commercial,Trail,Orlando,32830
+930,32,Fulton,Alley,Deir Ḥannā,75000
+931,14,Ramsey,Center,Gabao,4707
+932,16,Onsgard,Plaza,Moravská Třebová,571 01
+933,0,Pankratz,Way,Kolambugan,2100
+934,4734,Bonner,Park,Chai Nat,17000
+935,04,Reinke,Place,Kalix,952 61
+936,5451,Kim,Junction,Zhongzhang,75000
+937,35,Golf Course,Circle,Regente Feijó,19570-000
+938,7,Rutledge,Circle,Pines,7207
+939,458,Center,Avenue,Meishan,75000
+940,72,Vernon,Alley,Jendouba,75000
+941,2,Hudson,Parkway,São Joaquim,88600-000
+942,1300,Amoth,Way,Ureshino,859-3802
+943,404,Comanche,Plaza,Hoorn,1624
+944,01804,Judy,Circle,Xo’jayli Shahri,75000
+945,053,Bartelt,Avenue,Oliveira,35540-000
+946,548,Monica,Road,Bërxull,75000
+947,150,Oakridge,Crossing,Kalahang,75000
+948,1109,Laurel,Terrace,Kameoka,992-0321
+949,51300,Roth,Junction,La Concepción,75000
+950,7675,8th,Way,Guder Lao,75000
+951,452,Merrick,Lane,Milwaukee,53205
+952,106,Straubel,Lane,Chanthaburi,24120
+953,448,Division,Parkway,Bankaw,1211
+954,2,Derek,Street,Lubniewice,69-210
+955,7,Coleman,Alley,Quebracho,75000
+956,7747,Center,Avenue,Matanzas,75000
+957,60,Arizona,Plaza,Perushtitsa,4225
+958,41851,Lighthouse Bay,Park,Spassk-Dal’niy,692239
+959,9,La Follette,Terrace,Thanatpin,75000
+960,5,Village,Point,Al Qurḩ,75000
+961,9831,Luster,Hill,Murganhal,2760-040
+962,50,Farragut,Court,Santiago De Compostela,15899
+963,5551,Glacier Hill,Way,Obsza,23-413
+964,1385,Sugar,Alley,Gengwan,75000
+965,7504,Sachtjen,Pass,Bacuyangan,6114
+966,108,Redwing,Avenue,Raszków,63-440
+967,7266,Cambridge,Lane,Leluo,75000
+968,61206,Dayton,Plaza,Phu Kam Yao,23110
+969,9890,Merry,Road,Ketawang,75000
+970,7833,Dunning,Alley,Belovodskoye,75000
+971,1,Sachs,Junction,Paris La Défense,92056 CEDEX
+972,031,Sullivan,Circle,Dar Chabanne,75000
+973,8,Bluestem,Way,Těšany,664 54
+974,2,Bay,Circle,Magetlegar,75000
+975,497,3rd,Lane,Bilqās,75000
+976,9002,Bluestem,Road,Luleå,973 23
+977,1797,Clarendon,Place,Huangjing,75000
+978,05289,Florence,Drive,Wansheng,75000
+979,7431,Oriole,Drive,Beopwon,75000
+980,24,Dottie,Center,Qingping,75000
+981,9626,Stoughton,Trail,Salerno,84135
+982,58484,Mockingbird,Avenue,Targuist,75000
+983,033,Carioca,Crossing,Verkhnye Syn’ovydne,75000
+984,9,Badeau,Street,Akoupé,75000
+985,6,Rockefeller,Drive,Buliran,3100
+986,290,Arizona,Way,Cruz Alta,98000-000
+987,9,Bunting,Street,Naha-shi,903-0826
+988,62820,Troy,Place,Tinta,75000
+989,9,Homewood,Crossing,Neiafu,75000
+990,944,Beilfuss,Junction,Ust-Maya,678620
+991,84,Sugar,Street,Ngoc Hon Doc,75000
+992,569,Ridgeway,Lane,Hecun,75000
+993,4260,Pearson,Avenue,Kiboga,75000
+994,0906,Oakridge,Place,Qingshan,75000
+995,1,Meadow Valley,Alley,Lingxi,75000
+996,13831,Hazelcrest,Junction,Nuquí,276058
+997,38,Morrow,Alley,Caculé,46300-000
+998,33249,Johnson,Circle,Yilongyong,75000
+999,334,Schlimgen,Lane,Göteborg,404 32
+1000,42,Northfield,Pass,Tymoshivka,75000

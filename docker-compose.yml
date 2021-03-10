@@ -9,7 +9,8 @@ services:
       POSTGRES_PASSWORD: user
       PGDATA: /data/postgres
     volumes:
-      - ./res/good-food.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ./res/:/docker-entrypoint-initdb.d/:ro
+      - ./res/assets/:/var/lib/postgresql/data/assets/:ro
     ports:
       - "8082:5432"
     networks:

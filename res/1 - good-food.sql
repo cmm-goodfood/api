@@ -32,11 +32,11 @@ DROP TABLE IF EXISTS T_ADRESSE;
 CREATE TABLE T_ADRESSE
 (
     id                  SERIAL PRIMARY KEY,
-    numeroVoie          VARCHAR(15),
+    numeroVoie          INT,
     voie                VARCHAR(500),
     complement          VARCHAR(500),
     ville               VARCHAR(250),
-    codePostal          INT
+    codePostal          VARCHAR(50)
 );
 
 CREATE TABLE T_UTILISATEUR
@@ -47,7 +47,7 @@ CREATE TABLE T_UTILISATEUR
     motDePasse          VARCHAR(250),
     prenom              VARCHAR(250),
     nom                 VARCHAR(250),
-    permissionsAPI      INT,
+    permissionsAPI      VARCHAR(250),
 
     idAdresse           INT
 );
@@ -91,14 +91,14 @@ CREATE TABLE T_TYPE_COMMANDE
 CREATE TABLE T_TVA
 (
     id                  SERIAL PRIMARY KEY,
-    taux                INT,
+    taux                FLOAT,
     dateDebut           TIMESTAMP,
     dateFin             TIMESTAMP
 );
 
 CREATE TABLE T_COMMANDE
 (
-    id                  SERIAL PRIMARY KEY,
+    id                  BIGSERIAL PRIMARY KEY,
     dateCreation        TIMESTAMP,
     dateFin             TIMESTAMP,
     prixHT              DECIMAL,
