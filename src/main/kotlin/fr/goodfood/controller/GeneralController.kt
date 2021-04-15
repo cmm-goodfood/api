@@ -1,11 +1,11 @@
 package fr.goodfood.controller
 
+import fr.goodfood.database.Database
 import fr.goodfood.entities.User
 import io.javalin.http.Context
 import org.simplejavamail.email.EmailBuilder
 import org.simplejavamail.mailer.MailerBuilder
 import java.io.InputStream
-
 
 object GeneralController {
 
@@ -13,15 +13,13 @@ object GeneralController {
     data class VersionResponse(val current: Int, val default: Int, val versions: List<Version>);
 
     fun version(ctx: Context) {
-        ctx.json(
-            VersionResponse(
-                current = 1,
-                default = 1,
-                versions = arrayListOf(
-                    Version(number = 1, status = "disponible", default = true)
-                )
+        ctx.json(VersionResponse(
+            current = 1,
+            default = 1,
+            versions = arrayListOf(
+                Version(number = 1, status = "disponible", default = true)
             )
-        )
+        ))
     }
 
     data class Email(val email: String);
@@ -49,10 +47,7 @@ object GeneralController {
 
     fun resetPassword(ctx: Context) {
         val data = ctx.body<ResetPassword>()
-
-        val existing = UserController.mock.find {
-            it.id == data.id
-        }
+        val existing = Database.get<User>(data.id)
 
         if(existing == null) {
             ctx.status(404)

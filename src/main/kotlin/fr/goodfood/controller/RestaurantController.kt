@@ -1,58 +1,19 @@
 package fr.goodfood.controller
 
-import fr.goodfood.ListParams
+import fr.goodfood.database.Database
 import fr.goodfood.entities.*
-import io.javalin.core.validation.BodyValidator
 import io.javalin.http.Context
-import io.javalin.plugin.json.JavalinJson
-import java.util.*
 import kotlin.math.cos
 import kotlin.math.sqrt
 
 object RestaurantController {
 
-    private var id = 2
-    private var productId = 1
-    val mock = arrayListOf(
-        Restaurant(
-            id = 1,
-            name = "EatSalad",
-            description = "Salade sur mesure à emporter et en livraison",
-            shortDescription = "Salade sur mesure à emporter et en livraison",
-            address = Address(
-                id = 1,
-                number = "8",
-                street = "Cours d'Albret",
-                city = "Bordeaux",
-                postcode = "33000"
-            ),
-            deliveryRadius = 30,
-            location = Location("44.838717", "-0.581660"),
-            products = arrayListOf()
-        )
-    )
-
     fun list(ctx: Context) {
-        val params: ListParams = try {
-            BodyValidator(JavalinJson.fromJson(ctx.body(), ListParams::class.java)).get()
-        } catch (e: Exception) {
-            ListParams()
-        }
-
-        ctx.json(mock.subList(params.offset, (params.offset + params.limit).coerceAtMost(mock.size)))
+        AbstractController.list<Restaurant>(ctx)
     }
 
     fun find(ctx: Context) {
-        val id = ctx.pathParam("id").toInt()
-        val user = mock.find {
-            it.id == id
-        }
-
-        if (user == null) {
-            ctx.status(404)
-        } else {
-            ctx.json(user)
-        }
+        AbstractController.find<Restaurant>(ctx)
     }
 
     data class RestaurantSearch(val search: String, val location: Location, val radius: Int)
@@ -60,13 +21,13 @@ object RestaurantController {
     fun search(ctx: Context) {
         val search = ctx.body<RestaurantSearch>()
 
-        mock.filter {
+        val matching = Database.filter<Restaurant> {
             val text = it.name.contains(search.search) ||
                     it.shortDescription?.contains(search.search) ?: false ||
                     it.description?.contains(search.search) ?: false ||
                     it.address?.street?.contains(search.search) ?: false ||
                     it.address?.city?.contains(search.search) ?: false ||
-                    it.address?.postcode?.contains(search.search) ?: false;
+                    it.address?.postcode?.contains(search.search) ?: false
 
             val location = it.location?.let { it1 ->
                 distance(it1, search.location) <= search.radius
@@ -74,22 +35,19 @@ object RestaurantController {
 
             text || location ?: false
         }
+
+        ctx.json(matching)
     }
 
     fun create(ctx: Context) {
-        val restaurant = ctx.body<Restaurant>()
-        restaurant.id = id++
-
-        mock.add(restaurant)
+        Database.insert(ctx.body<Restaurant>())
 
         ctx.status(200)
     }
 
     fun edit(ctx: Context) {
         val id = ctx.pathParam("id").toInt()
-        val existing = mock.find {
-            it.id == id
-        }
+        val existing = Database.get<Restaurant>(id)
 
         if (existing == null) {
             ctx.status(404)
@@ -109,11 +67,8 @@ object RestaurantController {
 
     fun delete(ctx: Context) {
         val id = ctx.pathParam("id").toInt()
-        val removed = mock.removeIf {
-            it.id == id
-        }
 
-        if (removed) {
+        if (Database.remove<Restaurant>(id)) {
             ctx.status(200)
         } else {
             ctx.status(404)
@@ -122,15 +77,13 @@ object RestaurantController {
 
     fun addProduct(ctx: Context) {
         val id = ctx.pathParam("restaurant").toInt()
-        val restaurant = mock.find {
-            it.id == id
-        }
+        val restaurant = Database.get<Restaurant>(id)
 
         if (restaurant != null) {
             val product = ctx.body<Product>()
-            product.id = productId++;
-
             restaurant.products.add(product)
+
+            Database.insert(product)
 
             ctx.status(200)
         } else {
@@ -140,15 +93,11 @@ object RestaurantController {
 
     fun editProduct(ctx: Context) {
         val id = ctx.pathParam("restaurant").toInt()
-        val restaurant = mock.find {
-            it.id == id
-        }
+        val restaurant = Database.get<Restaurant>(id)
 
         if(restaurant !== null) {
             val productId = ctx.pathParam("product").toInt()
-            val existing = restaurant.products.find {
-                it.id == productId
-            }
+            val existing = Database.get<Product>(productId)
 
             if (existing == null) {
                 ctx.status(404)
@@ -170,17 +119,16 @@ object RestaurantController {
 
     fun deleteProduct(ctx: Context) {
         val id = ctx.pathParam("restaurant").toInt()
-        val restaurant = mock.find {
-            it.id == id
-        }
+        val restaurant = Database.get<Restaurant>(id)
 
         if(restaurant !== null) {
             val productId = ctx.pathParam("product").toInt()
-            val removed = restaurant.products.removeIf {
-                it.id == productId
-            }
 
-            if(removed) {
+            if(Database.remove<Product>(productId)) {
+                restaurant.products.removeIf {
+                    it.id == productId
+                }
+
                 ctx.status(200)
             } else {
                 ctx.status(404)

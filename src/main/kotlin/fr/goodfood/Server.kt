@@ -5,6 +5,7 @@ import com.auth0.jwt.JWTCreator
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
 import fr.goodfood.controller.GeneralController
+import fr.goodfood.controller.OrderController
 import fr.goodfood.controller.RestaurantController
 import fr.goodfood.controller.UserController
 import io.javalin.Javalin
@@ -44,6 +45,10 @@ fun main() {
             post("/restaurants/:restaurant/products", RestaurantController::addProduct, roles(Role.USER))
             patch("/restaurants/:restaurant/products/:product", RestaurantController::editProduct, roles(Role.USER))
             delete("/restaurants/:restaurant/products/:product", RestaurantController::deleteProduct, roles(Role.USER))
+
+            get("/orders/:restaurant", OrderController::list, roles(Role.USER))
+            get("/order/:id", OrderController::find, roles(Role.USER))
+            post("/orders/:restaurant", OrderController::create, roles(Role.USER))
         }
     }
     //val jwt = JavalinJWT.getDecodedFromContext(ctx)

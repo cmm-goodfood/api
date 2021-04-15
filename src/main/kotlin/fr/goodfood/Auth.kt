@@ -38,9 +38,10 @@ object Auth {
             val data = context.body<GenerateToken>()
 
             val user = User(
+                role = Role.USER,
                 email = data.email,
                 password = data.password,
-                role = Role.USER
+                id = 1
             )
 
             context.json(JWTResponse(provider.generateToken(user)))

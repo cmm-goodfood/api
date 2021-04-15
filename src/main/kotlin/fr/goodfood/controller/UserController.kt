@@ -1,55 +1,27 @@
 package fr.goodfood.controller
 
-import fr.goodfood.ListParams
 import fr.goodfood.Role
+import fr.goodfood.database.Database
 import fr.goodfood.entities.User
-import io.javalin.Javalin
-import io.javalin.core.validation.BodyValidator
-import io.javalin.http.BadRequestResponse
 import io.javalin.http.Context
-import io.javalin.plugin.json.JavalinJson
-import java.util.*
 
 object UserController {
 
-    private var id = 5
-    val mock = arrayListOf(
-        User(id = 1, email = "clement.curiel@viacesi.fr", firstname = "Clément", lastname = "CURIEL", role = Role.RESTAURANT),
-        User(id = 2, email = "matteo.hevin@viacesi.fr", firstname = "Matteo", lastname = "HEVIN", role = Role.DELIVERY),
-        User(id = 3, email = "pierre.pegeon@viacesi.fr", firstname = "Pierre", lastname = "PEGEON", role = Role.MODERATOR),
-        User(id = 4, email = "marwane.benoukaiss@viacesi.fr", firstname = "Marwane", lastname = "BENOU-KAÏSS", role = Role.USER)
-    )
-
     fun list(ctx: Context) {
-        val params: ListParams = try {
-            BodyValidator(JavalinJson.fromJson(ctx.body(), ListParams::class.java)).get()
-        } catch (e: Exception) {
-            ListParams()
-        }
-
-        ctx.json(mock.subList(params.offset, (params.offset + params.limit).coerceAtMost(mock.size)))
+        AbstractController.list<User>(ctx)
     }
 
     fun find(ctx: Context) {
-        val id = ctx.pathParam("id").toInt()
-        val user = mock.find {
-            it.id == id
-        }
-
-        if(user == null) {
-            ctx.status(404)
-        } else {
-            ctx.json(user)
-        }
+        AbstractController.find<User>(ctx)
     }
 
     fun findByEmail(ctx: Context) {
-        val search = ctx.queryParam("email");
-        val user = mock.find {
+        val search = ctx.queryParam("email")
+        val user = Database.filter<User> {
             it.email == search
         }
 
-        if(user != null) {
+        if (user.size == 1) {
             ctx.json(user)
         } else {
             ctx.status(404)
@@ -58,21 +30,18 @@ object UserController {
 
     fun create(ctx: Context) {
         val user = ctx.body<User>()
-        user.id = id++
         user.role = Role.USER
 
-        mock.add(user)
+        Database.insert(user)
 
         ctx.status(200)
     }
 
     fun edit(ctx: Context) {
         val id = ctx.pathParam("id").toInt()
-        val existing = mock.find {
-            it.id == id
-        }
+        val existing = Database.get<User>(id)
 
-        if(existing == null) {
+        if (existing == null) {
             ctx.status(404)
             return
         }
@@ -89,11 +58,9 @@ object UserController {
 
     fun delete(ctx: Context) {
         val id = ctx.pathParam("id").toInt()
-        val removed = mock.removeIf {
-            it.id == id
-        }
+        val removed = Database.remove<User>(id)
 
-        if(removed) {
+        if (removed) {
             ctx.status(200)
         } else {
             ctx.status(404)
