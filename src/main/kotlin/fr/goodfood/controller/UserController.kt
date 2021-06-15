@@ -1,5 +1,6 @@
 package fr.goodfood.controller
 
+import fr.goodfood.Mailer
 import fr.goodfood.Role
 import fr.goodfood.database.Database
 import fr.goodfood.entities.User
@@ -33,6 +34,7 @@ object UserController {
         user.role = Role.USER
 
         Database.insert(user)
+        Mailer.send(user, "Compte créé", "new_account.html")
 
         ctx.status(200)
     }
@@ -47,11 +49,11 @@ object UserController {
         }
 
         val user = ctx.body<User>()
-        existing.email = user.email
-        existing.firstname = user.firstname
-        existing.lastname = user.lastname
-        existing.password = user.password
-        existing.address = user.address
+        existing.email = user.email ?: existing.email
+        existing.firstname = user.firstname ?: existing.firstname
+        existing.lastname = user.lastname ?: existing.lastname
+        existing.password = user.password ?: existing.password
+        existing.address = user.address ?: existing.address
 
         ctx.status(200)
     }

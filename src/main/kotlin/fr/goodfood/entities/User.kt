@@ -5,7 +5,7 @@ import fr.goodfood.Role
 data class User(
     override var id: Int? = null,
     var role: Role? = null,
-    var email: String,
+    var email: String? = null,
     var password: String? = null,
     var firstname: String? = null,
     var lastname: String? = null,

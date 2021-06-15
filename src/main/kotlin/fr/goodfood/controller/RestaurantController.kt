@@ -16,27 +16,40 @@ object RestaurantController {
         AbstractController.find<Restaurant>(ctx)
     }
 
-    data class RestaurantSearch(val search: String, val location: Location, val radius: Int)
+    data class RestaurantSearch(val search: String, val location: Location? = null, val radius: Int? = null)
 
     fun search(ctx: Context) {
         val search = ctx.body<RestaurantSearch>()
 
         val matching = Database.filter<Restaurant> {
-            val text = it.name.contains(search.search) ||
-                    it.shortDescription?.contains(search.search) ?: false ||
-                    it.description?.contains(search.search) ?: false ||
-                    it.address?.street?.contains(search.search) ?: false ||
-                    it.address?.city?.contains(search.search) ?: false ||
-                    it.address?.postcode?.contains(search.search) ?: false
+            val text = stringMatches(it.name, search.search) ||
+                    stringMatches(it.shortDescription, search.search) ||
+                    stringMatches(it.description, search.search) ||
+                    stringMatches(it.address?.street, search.search) ||
+                    stringMatches(it.address?.city, search.search) ||
+                    stringMatches(it.address?.postcode, search.search)
 
-            val location = it.location?.let { it1 ->
-                distance(it1, search.location) <= search.radius
+                val location = if (search.location != null) {
+                val radius = search.radius ?: 50
+                    it.location?.let { it1 ->
+                    distance(it1, search.location) <= radius
+                }
+            } else {
+                false
             }
 
             text || location ?: false
         }
 
         ctx.json(matching)
+    }
+    
+    private fun stringMatches(a: String?, b: String?): Boolean {
+        return if(a != null && b != null) {
+            a.toLowerCase().contains(b.toLowerCase())
+        } else {
+            false
+        }
     }
 
     fun create(ctx: Context) {
@@ -55,12 +68,12 @@ object RestaurantController {
         }
 
         val restaurant = ctx.body<Restaurant>()
-        existing.name = restaurant.name
-        existing.shortDescription = restaurant.shortDescription
-        existing.description = restaurant.description
-        existing.address = existing.address
-        existing.deliveryRadius = restaurant.deliveryRadius
-        existing.location = restaurant.location
+        existing.name = restaurant.name ?: existing.name
+        existing.shortDescription = restaurant.shortDescription ?: existing.shortDescription
+        existing.description = restaurant.description ?: existing.description
+        existing.address = restaurant.address ?: existing.address
+        existing.deliveryRadius = restaurant.deliveryRadius ?: existing.deliveryRadius
+        existing.location = restaurant.location ?: existing.location
 
         ctx.status(200)
     }
@@ -81,7 +94,7 @@ object RestaurantController {
 
         if (restaurant != null) {
             val product = ctx.body<Product>()
-            restaurant.products.add(product)
+            restaurant.products!!.add(product)
 
             Database.insert(product)
 
@@ -95,7 +108,7 @@ object RestaurantController {
         val id = ctx.pathParam("restaurant").toInt()
         val restaurant = Database.get<Restaurant>(id)
 
-        if(restaurant !== null) {
+        if (restaurant !== null) {
             val productId = ctx.pathParam("product").toInt()
             val existing = Database.get<Product>(productId)
 
@@ -105,11 +118,11 @@ object RestaurantController {
             }
 
             val product = ctx.body<Product>()
-            existing.category = product.category
-            existing.name = product.name
-            existing.description = product.description
-            existing.price = product.price
-            existing.quantity = product.quantity
+            existing.category = product.category ?: existing.category
+            existing.name = product.name ?: existing.name
+            existing.description = product.description ?: existing.description
+            existing.price = product.price ?: existing.price
+            existing.quantity = product.quantity ?: existing.quantity
 
             ctx.status(200)
         } else {
@@ -121,11 +134,11 @@ object RestaurantController {
         val id = ctx.pathParam("restaurant").toInt()
         val restaurant = Database.get<Restaurant>(id)
 
-        if(restaurant !== null) {
+        if (restaurant !== null) {
             val productId = ctx.pathParam("product").toInt()
 
-            if(Database.remove<Product>(productId)) {
-                restaurant.products.removeIf {
+            if (Database.remove<Product>(productId)) {
+                restaurant.products!!.removeIf {
                     it.id == productId
                 }
 

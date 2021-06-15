@@ -55,13 +55,14 @@ object Database {
             firstname = "Marwane",
             lastname = "BENOU-KAÏSS",
             role = Role.USER,
-            address = eightOfMay
+            address = eightOfMay,
+            password = "oke"
         )
 
         insert(mbenoukaiss)
 
         val waterBottle = Product(
-            category = "drink",
+            category = ProductCategory.DRINK,
             name = "Bouteille d'eau",
             description = "Contient 50cl d'eau",
             price = 49.99,
@@ -83,6 +84,8 @@ object Database {
         insert(eatSalad)
 
         insert(Order(
+            type = OrderType.TAKEAWAY,
+            state = OrderState.DELIVERED,
             restaurant = eatSalad,
             user = mbenoukaiss,
             address = eightOfMay,
@@ -110,6 +113,10 @@ object Database {
 
     inline fun <reified T: Identified> filter(predicate: (T) -> Boolean): List<T> {
         return data<T>().filter(predicate)
+    }
+
+    inline fun <reified T: Identified> first(predicate: (T) -> Boolean): T? {
+        return data<T>().firstOrNull(predicate)
     }
 
     inline fun <reified T: Identified> insert(vararg items: T) {

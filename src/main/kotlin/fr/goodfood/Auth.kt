@@ -4,6 +4,8 @@ import com.auth0.jwt.JWT
 import com.auth0.jwt.JWTCreator
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
+import fr.goodfood.database.Database
+import fr.goodfood.entities.Restaurant
 import fr.goodfood.entities.User
 import io.javalin.Javalin
 import io.javalin.http.Context
@@ -15,7 +17,7 @@ import javalinjwt.examples.JWTResponse
 
 object Auth {
 
-    data class GenerateToken(val email: String, val password: String);
+    data class GenerateToken(val email: String, val password: String)
 
     fun setup(app: Javalin): Handler {
         val algorithm = Algorithm.HMAC256("verysecretrecstsfdeuzfzoeifjzeoih")
@@ -32,20 +34,28 @@ object Auth {
         val provider = JWTProvider(algorithm, generator, verifier)
         val decodeHandler: Handler = JavalinJWT.createHeaderDecodeHandler(provider)
 
-        app.before(decodeHandler);
+        app.before(decodeHandler)
 
         return Handler { context: Context ->
             val data = context.body<GenerateToken>()
 
-            val user = User(
-                role = Role.USER,
-                email = data.email,
-                password = data.password,
-                id = 1
-            )
+            val existing = Database.first<User> {
+                it.email == data.email
+            }
 
-            context.json(JWTResponse(provider.generateToken(user)))
-        };
+            if(existing != null && existing.password == data.password) {
+                val user = User(
+                    role = Role.USER,
+                    email = data.email,
+                    password = data.password,
+                    id = 1
+                )
+
+                context.json(JWTResponse(provider.generateToken(user)))
+            } else {
+                context.status(401)
+            }
+        }
     }
 
 }

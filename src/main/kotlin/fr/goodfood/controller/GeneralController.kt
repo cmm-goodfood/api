@@ -1,5 +1,6 @@
 package fr.goodfood.controller
 
+import fr.goodfood.Mailer
 import fr.goodfood.database.Database
 import fr.goodfood.entities.User
 import io.javalin.http.Context
@@ -9,36 +10,33 @@ import java.io.InputStream
 
 object GeneralController {
 
-    data class Version(val number: Int, val status: String, val default: Boolean);
-    data class VersionResponse(val current: Int, val default: Int, val versions: List<Version>);
+    data class Version(val number: Int, val status: String, val default: Boolean)
+    data class VersionResponse(val current: Int, val default: Int, val versions: List<Version>)
 
     fun version(ctx: Context) {
-        ctx.json(VersionResponse(
-            current = 1,
-            default = 1,
-            versions = arrayListOf(
-                Version(number = 1, status = "disponible", default = true)
+        ctx.json(
+            VersionResponse(
+                current = 1,
+                default = 1,
+                versions = arrayListOf(
+                    Version(number = 1, status = "disponible", default = true)
+                )
             )
-        ))
+        )
     }
 
-    data class Email(val email: String);
+    data class Email(val email: String)
 
     fun resetRequest(ctx: Context) {
-        val data = ctx.body<Email>();
+        val data = ctx.body<Email>()
 
-        val email = EmailBuilder.startingBlank()
-            .from("goodfood", "goodfood@goodfood.com")
-            .to(data.email, data.email)
-            .withSubject("Mail")
-            .withHTMLText("<p>Mail</p>")
-            .buildEmail()
+        val user = Database.first<User> {
+            it.email == data.email
+        }
 
-        val mailer = MailerBuilder
-            .withSMTPServer("smtp.mailtrap.io", 587, "e10154a96602b7", "a44207f04588d1")
-            .buildMailer();
-
-        mailer.sendMail(email);
+        if(user != null) {
+            Mailer.send(user, "Mot de passe oublié", "password_forgotten.html")
+        }
 
         ctx.result(String())
     }
@@ -49,7 +47,7 @@ object GeneralController {
         val data = ctx.body<ResetPassword>()
         val existing = Database.get<User>(data.id)
 
-        if(existing == null) {
+        if (existing == null) {
             ctx.status(404)
             return
         }
