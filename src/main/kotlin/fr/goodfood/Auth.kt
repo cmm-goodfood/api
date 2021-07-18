@@ -13,8 +13,13 @@ import javalinjwt.JWTGenerator
 import javalinjwt.JWTProvider
 import javalinjwt.JavalinJWT
 import javalinjwt.examples.JWTResponse
+import java.util.*
+import java.util.function.Consumer
+import java.util.function.Function
 
 object Auth {
+
+    val revoked = HashSet<String>()
 
     data class GenerateToken(val email: String, val password: String)
 
@@ -31,9 +36,14 @@ object Auth {
         val verifier: JWTVerifier = JWT.require(algorithm).build()
 
         val provider = JWTProvider(algorithm, generator, verifier)
-        val decodeHandler: Handler = JavalinJWT.createHeaderDecodeHandler(provider)
 
-        app.before(decodeHandler)
+        app.before {
+            JavalinJWT.getTokenFromHeader(it)
+                .flatMap { token -> if(!revoked.contains(token)) Optional.of(token) else Optional.empty() }
+                .flatMap { token -> provider.validateToken(token) }
+                .ifPresent { jwt -> JavalinJWT.addDecodedToContext(it, jwt) }
+
+        }
 
         return Handler { context: Context ->
             val data = context.body<GenerateToken>()

@@ -1,12 +1,10 @@
 package fr.goodfood.controller
 
+import fr.goodfood.Auth
 import fr.goodfood.Mailer
 import fr.goodfood.database.Database
 import fr.goodfood.entities.User
 import io.javalin.http.Context
-import org.simplejavamail.email.EmailBuilder
-import org.simplejavamail.mailer.MailerBuilder
-import java.io.InputStream
 
 object GeneralController {
 
@@ -38,7 +36,7 @@ object GeneralController {
             Mailer.send(user, "Mot de passe oublié", "password_forgotten.html")
         }
 
-        ctx.result(String())
+        ctx.status(200)
     }
 
     data class ResetPassword(val token: String, val id: Int, val password: String)
@@ -54,7 +52,7 @@ object GeneralController {
 
         existing.password = data.password
 
-        ctx.result(String())
+        ctx.status(200)
     }
 
     data class Revoke(val token: String)
@@ -62,9 +60,9 @@ object GeneralController {
     fun revoke(ctx: Context) {
         val data = ctx.body<Revoke>()
 
-        //TODO: revoke token
+        Auth.revoked.add(data.token)
 
-        ctx.result(String())
+        ctx.status(200)
     }
 
 }
