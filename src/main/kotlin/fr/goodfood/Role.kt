@@ -1,13 +1,16 @@
 package fr.goodfood
 
-import io.javalin.core.security.Role
-
-enum class Role : Role {
-    ANONYMOUS, USER, DELIVERY, RESTAURANT, MODERATOR
+enum class Role : io.javalin.core.security.Role {
+    ANONYMOUS, CLIENT, FRANCHISE, FRANCHISES_MANAGER
 }
 
-val mapping: Map<String, fr.goodfood.Role> = hashMapOf(
-    fr.goodfood.Role.ANONYMOUS.name to fr.goodfood.Role.ANONYMOUS,
-    fr.goodfood.Role.USER.name to fr.goodfood.Role.USER,
-    fr.goodfood.Role.MODERATOR.name to fr.goodfood.Role.MODERATOR
+val ANONYMOUS = setOf(Role.ANONYMOUS, Role.CLIENT, Role.FRANCHISE, Role.FRANCHISES_MANAGER)
+val CLIENT = setOf(Role.CLIENT, Role.FRANCHISE, Role.FRANCHISES_MANAGER)
+val FRANCHISE = setOf(Role.FRANCHISE, Role.FRANCHISES_MANAGER)
+val FRANCHISES_MANAGER = setOf(Role.FRANCHISES_MANAGER)
+
+val mapping: Map<String, Role> = hashMapOf(
+    Role.ANONYMOUS.name to Role.ANONYMOUS,
+    Role.CLIENT.name to Role.CLIENT,
+    Role.FRANCHISES_MANAGER.name to Role.FRANCHISES_MANAGER
 );

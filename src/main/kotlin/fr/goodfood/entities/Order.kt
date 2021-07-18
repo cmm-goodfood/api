@@ -1,11 +1,11 @@
 package fr.goodfood.entities
 
 enum class OrderType {
-    EAT_IN, TAKEAWAY
+    DELIVER, TAKEAWAY
 }
 
 enum class OrderState {
-    PREPARING, DELIVERING, DELIVERED, CANCELLED
+    PREPARING, PREPARED, DELIVERING, TAKEN, DELIVERED, CANCELLED
 }
 
 data class CreateOrder(

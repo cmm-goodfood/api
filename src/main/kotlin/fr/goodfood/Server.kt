@@ -6,7 +6,6 @@ import fr.goodfood.controller.RestaurantController
 import fr.goodfood.controller.UserController
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
-import io.javalin.core.security.SecurityUtil.roles
 import javalinjwt.JWTAccessManager
 
 fun main() {
@@ -17,36 +16,38 @@ fun main() {
     val generator = Auth.setup(app)
 
     app.routes {
-        get("/version", GeneralController::version, roles(Role.ANONYMOUS))
+        get("/", { it.html("API Goodfood") }, ANONYMOUS)
+        get("/version", GeneralController::version, ANONYMOUS)
         path("/v1") {
-            post("/token", generator, roles(Role.ANONYMOUS))
-            delete("/token", GeneralController::revoke, roles(Role.ANONYMOUS))
-            post("/users/reset", GeneralController::resetRequest, roles(Role.ANONYMOUS))
-            put("/users/reset", GeneralController::resetPassword, roles(Role.ANONYMOUS))
+            post("/token", generator, ANONYMOUS)
+            delete("/token", GeneralController::revoke, ANONYMOUS)
+            post("/users/reset", GeneralController::resetRequest, ANONYMOUS)
+            put("/users/reset", GeneralController::resetPassword, ANONYMOUS)
 
-            get("/users", UserController::list, roles(Role.USER))
-            get("/users/:id", UserController::find, roles(Role.USER))
-            get("/users/search", UserController::findByEmail, roles(Role.USER))
-            post("/users", UserController::create, roles(Role.USER))
-            patch("/users/:id", UserController::edit, roles(Role.USER))
-            delete("/users/:id", UserController::delete, roles(Role.USER))
+            get("/users", UserController::list, FRANCHISES_MANAGER)
+            get("/users/:id", UserController::find, CLIENT)
+            get("/users/search", UserController::findByEmail, FRANCHISE)
+            post("/users", UserController::create, ANONYMOUS)
+            post("/users/confirm", UserController::confirm, ANONYMOUS)
+            patch("/users/:id", UserController::edit, CLIENT)
+            delete("/users/:id", UserController::delete, CLIENT)
 
-            get("/restaurants", RestaurantController::list, roles(Role.USER))
-            get("/restaurants/:id", RestaurantController::find, roles(Role.USER))
-            post("/restaurants/search", RestaurantController::search, roles(Role.USER))
-            post("/restaurants", RestaurantController::create, roles(Role.USER))
-            patch("/restaurants/:id", RestaurantController::edit, roles(Role.USER))
-            delete("/restaurants/:id", RestaurantController::delete, roles(Role.USER))
-            post("/restaurants/:restaurant/products", RestaurantController::addProduct, roles(Role.USER))
-            patch("/restaurants/:restaurant/products/:product", RestaurantController::editProduct, roles(Role.USER))
-            delete("/restaurants/:restaurant/products/:product", RestaurantController::deleteProduct, roles(Role.USER))
+            get("/restaurants", RestaurantController::list, CLIENT)
+            get("/restaurants/:id", RestaurantController::find, CLIENT)
+            post("/restaurants/search", RestaurantController::search, ANONYMOUS)
+            post("/restaurants", RestaurantController::create, FRANCHISES_MANAGER)
+            patch("/restaurants/:id", RestaurantController::edit, FRANCHISE)
+            delete("/restaurants/:id", RestaurantController::delete, FRANCHISES_MANAGER)
+            post("/restaurants/:restaurant/products", RestaurantController::addProduct, FRANCHISE)
+            patch("/restaurants/:restaurant/products/:product", RestaurantController::editProduct, FRANCHISE)
+            delete("/restaurants/:restaurant/products/:product", RestaurantController::deleteProduct, FRANCHISE)
 
-            get("/restaurant/:restaurant/orders", OrderController::list, roles(Role.USER))
-            post("/restaurant/:restaurant/orders", OrderController::create, roles(Role.USER))
-            get("/orders/:id", OrderController::find, roles(Role.USER))
-            patch("/orders/:number", OrderController::edit, roles(Role.USER))
+            get("/restaurants/:restaurant/orders", OrderController::list, CLIENT)
+            post("/restaurants/:restaurant/orders", OrderController::create, CLIENT)
+            get("/orders/:id", OrderController::find, CLIENT)
+            patch("/orders/:number", OrderController::edit, CLIENT)
         }
     }
 
-    app.start(8080)
+    app.start(80)
 }

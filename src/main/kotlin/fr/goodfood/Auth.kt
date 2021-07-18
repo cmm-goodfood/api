@@ -5,7 +5,6 @@ import com.auth0.jwt.JWTCreator
 import com.auth0.jwt.JWTVerifier
 import com.auth0.jwt.algorithms.Algorithm
 import fr.goodfood.database.Database
-import fr.goodfood.entities.Restaurant
 import fr.goodfood.entities.User
 import io.javalin.Javalin
 import io.javalin.http.Context
@@ -43,12 +42,12 @@ object Auth {
                 it.email == data.email
             }
 
-            if(existing != null && existing.password == data.password) {
+            if (existing != null && existing.password == data.password) {
                 val user = User(
-                    role = Role.USER,
+                    id = existing.id,
+                    role = existing.role,
                     email = data.email,
-                    password = data.password,
-                    id = 1
+                    password = data.password
                 )
 
                 context.json(JWTResponse(provider.generateToken(user)))

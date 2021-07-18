@@ -13,7 +13,7 @@ object Mailer {
     fun send(user: User, subject: String, template: String, variables: HashMap<String, String> = HashMap()) {
         var content = readTemplate(template)
         for ((variable, value) in variables.entries) {
-            content = content.replace(variable, value)
+            content = content.replace("{$variable}", value)
         }
 
         val email = EmailBuilder.startingBlank()

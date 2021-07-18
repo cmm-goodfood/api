@@ -122,7 +122,7 @@ object RestaurantController {
             existing.name = product.name ?: existing.name
             existing.description = product.description ?: existing.description
             existing.price = product.price ?: existing.price
-            existing.quantity = product.quantity ?: existing.quantity
+            existing.stock = product.stock ?: existing.stock
 
             ctx.status(200)
         } else {

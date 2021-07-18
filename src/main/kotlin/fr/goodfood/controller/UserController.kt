@@ -4,7 +4,9 @@ import fr.goodfood.Mailer
 import fr.goodfood.Role
 import fr.goodfood.database.Database
 import fr.goodfood.entities.User
+import fr.goodfood.randomString
 import io.javalin.http.Context
+import javalinjwt.JavalinJWT
 
 object UserController {
 
@@ -31,10 +33,42 @@ object UserController {
 
     fun create(ctx: Context) {
         val user = ctx.body<User>()
-        user.role = Role.USER
+
+        val role = Role.valueOf(JavalinJWT.getDecodedFromContext(ctx)
+            .getClaim("role")
+            .asString())
+
+        user.password = null;
+        user.token = randomString(16);
+        if(role != Role.FRANCHISES_MANAGER) {
+            user.role = Role.CLIENT
+        }
 
         Database.insert(user)
-        Mailer.send(user, "Compte créé", "new_account.html")
+        Mailer.send(user, "Compte créé", "new_account.html", hashMapOf(
+            "email" to user.email!!,
+            "firstname" to user.firstname!!,
+            "lastname" to user.lastname!!,
+            "token" to user.token!!
+        ))
+
+        ctx.status(200)
+    }
+
+    data class ConfirmPassword(val email: String, val token: String, val password: String)
+
+    fun confirm(ctx: Context) {
+        val confirmation = ctx.body<ConfirmPassword>()
+        val user = Database.first<User> { it.email == confirmation.email }
+
+        if(user == null) {
+            ctx.status(404);
+            return
+        }
+
+        if(confirmation.token == user.token) {
+            user.password = confirmation.password
+        }
 
         ctx.status(200)
     }

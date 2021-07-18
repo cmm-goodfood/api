@@ -38,23 +38,21 @@ object Database {
             email = "clement.curiel@viacesi.fr",
             firstname = "Clément",
             lastname = "CURIEL",
-            role = Role.RESTAURANT
+            role = Role.FRANCHISE
         ))
-
-        insert(User(email = "matteo.hevin@viacesi.fr", firstname = "Matteo", lastname = "HEVIN", role = Role.DELIVERY))
 
         insert(User(
             email = "pierre.pegeon@viacesi.fr",
             firstname = "Pierre",
             lastname = "PEGEON",
-            role = Role.MODERATOR
+            role = Role.FRANCHISES_MANAGER
         ))
 
         val mbenoukaiss = User(
             email = "marwane.benoukaiss@viacesi.fr",
             firstname = "Marwane",
             lastname = "BENOU-KAÏSS",
-            role = Role.USER,
+            role = Role.FRANCHISES_MANAGER,
             address = eightOfMay,
             password = "oke"
         )
@@ -66,13 +64,13 @@ object Database {
             name = "Bouteille d'eau",
             description = "Contient 50cl d'eau",
             price = 49.99,
-            quantity = 55
+            stock = 55
         )
 
         insert(waterBottle)
 
-        val eatSalad = Restaurant(
-            name = "EatSalad",
+        val goodfood = Restaurant(
+            name = "GoodFood",
             description = "Salade sur mesure à emporter et en livraison",
             shortDescription = "Salade sur mesure à emporter et en livraison",
             address = coursAlbret,
@@ -81,12 +79,12 @@ object Database {
             products = arrayListOf(waterBottle)
         )
 
-        insert(eatSalad)
+        insert(goodfood)
 
         insert(Order(
             type = OrderType.TAKEAWAY,
             state = OrderState.DELIVERED,
-            restaurant = eatSalad,
+            restaurant = goodfood,
             user = mbenoukaiss,
             address = eightOfMay,
             products = arrayListOf(waterBottle),

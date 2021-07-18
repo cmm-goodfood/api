@@ -1,6 +1,7 @@
 package fr.goodfood.controller
 
 import fr.goodfood.ListParams
+import fr.goodfood.Mailer
 import fr.goodfood.database.Database
 import fr.goodfood.entities.*
 import io.javalin.http.Context
@@ -34,10 +35,16 @@ object OrderController {
         val user = Database.first<User> {
             it.email == email
         }
-
+        println(email)
+        println(user !== null)
+        println(restaurant)
         if (restaurant == null || user == null) {
             ctx.status(404)
             return
+        }
+
+        val products = raw.products.map {
+            Database.get<Product>(it)!!
         }
 
         Database.insert(
@@ -47,10 +54,17 @@ object OrderController {
                 restaurant = restaurant,
                 user = user,
                 address = user.address!!,
-                products = raw.products.map {
-                    Database.get<Product>(it)!!
-                },
+                products = products,
                 time = "now"
+            )
+        )
+
+        Mailer.send(
+            user, "Commande créée", "new_order.html", hashMapOf(
+                "firstname" to user.firstname!!,
+                "lastname" to user.lastname!!,
+                "future_status" to if (raw.type == OrderType.DELIVER) "livrée" else "prête",
+                "order_content" to products.map { "<li>${it.name}</li>" }.joinToString("")
             )
         )
 

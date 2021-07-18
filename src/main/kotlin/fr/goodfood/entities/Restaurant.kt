@@ -23,5 +23,5 @@ data class Product(
     var name: String? = null,
     var description: String? = null,
     var price: Double? = null,
-    var quantity: Int? = null
+    var stock: Int? = null
 ): Identified(id)

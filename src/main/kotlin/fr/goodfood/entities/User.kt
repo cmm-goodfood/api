@@ -7,6 +7,7 @@ data class User(
     var role: Role? = null,
     var email: String? = null,
     var password: String? = null,
+    var token: String? = null,
     var firstname: String? = null,
     var lastname: String? = null,
     var address: Address? = null
