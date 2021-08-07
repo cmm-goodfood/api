@@ -35,9 +35,7 @@ object OrderController {
         val user = Database.first<User> {
             it.email == email
         }
-        println(email)
-        println(user !== null)
-        println(restaurant)
+
         if (restaurant == null || user == null) {
             ctx.status(404)
             return

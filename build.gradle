@@ -18,11 +18,17 @@ dependencies {
     implementation group: 'org.simplejavamail', name: 'simple-java-mail', version: '6.5.0'
     implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.10.3"
     implementation "org.slf4j:slf4j-simple:1.7.30"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.3.1"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.3.1"
+    testCompile "com.konghq:unirest-java:3.4.00"
+    testCompile "org.assertj:assertj-core:3.11.1"
+    testCompile "io.mockk:mockk:1.9.3"
 }
 
 jar {
     archiveName = "${jar.baseName}.${jar.extension}"
-
+    duplicatesStrategy = 'INCLUDE'
     manifest {
         attributes 'Main-Class': 'fr.goodfood.ServerKt'
     }

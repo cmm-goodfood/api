@@ -52,7 +52,7 @@ object Auth {
                 it.email == data.email
             }
 
-            if (existing != null && existing.password == data.password) {
+            if (existing != null && JHash.isValid(existing.password, data.password) ) {
                 val user = User(
                     id = existing.id,
                     role = existing.role,

@@ -8,7 +8,13 @@ import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.*
 import javalinjwt.JWTAccessManager
 
-fun main() {
+fun main(args: Array<String>) {
+    val port = if(args.size == 1 && args[0].toIntOrNull() != null) {
+        args[0].toIntOrNull()!!
+    } else {
+        80
+    }
+
     val app = Javalin.create {
         it.accessManager(JWTAccessManager("role", mapping, Role.ANONYMOUS))
     }
@@ -49,5 +55,5 @@ fun main() {
         }
     }
 
-    app.start(80)
+    app.start(port)
 }

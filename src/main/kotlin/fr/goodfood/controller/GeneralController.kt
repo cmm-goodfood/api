@@ -50,7 +50,7 @@ object GeneralController {
             return
         }
 
-        existing.password = data.password
+        existing.password = JHash.hash(data.password)
 
         ctx.status(200)
     }

@@ -54,7 +54,7 @@ object Database {
             lastname = "BENOU-KAÏSS",
             role = Role.FRANCHISES_MANAGER,
             address = eightOfMay,
-            password = "oke"
+            password = JHash.hash("oke")
         )
 
         insert(mbenoukaiss)

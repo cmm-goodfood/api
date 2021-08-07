@@ -1,5 +1,6 @@
 package fr.goodfood.controller
 
+import JHash
 import fr.goodfood.Mailer
 import fr.goodfood.Role
 import fr.goodfood.database.Database
@@ -38,6 +39,20 @@ object UserController {
             .getClaim("role")
             .asString())
 
+        val existing = Database.filter<User> {
+            it.email == user.email
+        }
+
+        if(existing.isNotEmpty()) {
+            ctx.status(200)
+            ctx.json(hashMapOf(
+                "success" to false,
+                "message" to "Un utilisateur existe déjà pour cette adresse email"
+            ))
+
+            return
+        }
+
         user.password = null;
         user.token = randomString(16);
         if(role != Role.FRANCHISES_MANAGER) {
@@ -67,7 +82,7 @@ object UserController {
         }
 
         if(confirmation.token == user.token) {
-            user.password = confirmation.password
+            user.password = JHash.hash(confirmation.password)
         }
 
         ctx.status(200)
@@ -82,12 +97,19 @@ object UserController {
             return
         }
 
+        val role = Role.valueOf(JavalinJWT.getDecodedFromContext(ctx)
+            .getClaim("role")
+            .asString())
+
         val user = ctx.body<User>()
         existing.email = user.email ?: existing.email
         existing.firstname = user.firstname ?: existing.firstname
         existing.lastname = user.lastname ?: existing.lastname
-        existing.password = user.password ?: existing.password
+        existing.password = JHash.hash(user.password) ?: existing.password
         existing.address = user.address ?: existing.address
+        if(role != Role.FRANCHISES_MANAGER) {
+            existing.role = user.role ?: existing.role
+        }
 
         ctx.status(200)
     }
